@@ -1,0 +1,19 @@
+columnSuffix: zwuwrnty
+contentColumnType: text
+fieldGroup: a9139c43-75e7-4e46-810c-277881ef9e3b # FAQ
+handle: heading
+instructions: null
+name: Heading
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

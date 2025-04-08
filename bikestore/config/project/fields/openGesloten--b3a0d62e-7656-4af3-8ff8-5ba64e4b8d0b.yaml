@@ -1,0 +1,35 @@
+columnSuffix: ovbgnjlt
+contentColumnType: string(8)
+fieldGroup: 15aca9d8-3109-47f8-b2d9-c1c474a09489 # Openingsuren
+handle: openGesloten
+instructions: null
+name: Open/gesloten
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Open
+        -
+          - value
+          - open
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Gesloten
+        -
+          - value
+          - gesloten
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Bikestore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <script src="{{siteUrl}}/vue-assets/js/checkout1.js"></script>
+    <link rel="stylesheet" href="{{siteUrl}}/vue-assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="{{siteUrl}}/vue-assets/assets/favicon.ico">
+</head>
+
+<body class="bg-primary-white"><div id="top"></div>
+
+
+{% include 'upper-navbar.twig' %}
+{% include 'navbar-hero.twig' %}
+
+ 
+    <div class="lg:h-824 sm:h-476 flex lg:relative bg-nav-text-green lg:bg-white z-0">
+      <div class="hidden lg:block lg:w-2/5 bg-primary-white flex justify-center items-center">
+        <img src="./vue-assets/assets/fietsverzekering-kosten.svg" alt="old bike" class="mr-6 absolute top-1/2 w-1/2 sm:w-1/2 md:w-2/5 transform -translate-x-1/4 -translate-y-1/2 ">
+      </div>
+
+    <div class="w-full lg:w-3/5 bg-nav-text-green flex justify-center">
+      <div class="flex w-full lg:w-4/5 justify-end items-center md:h-full md:py-0 py-10">
+        <div class="flex flex-col text-left text-primary-white px-6">
+
+        <p class="font-black font-sofia text-3xl md:text-5xl xl:text-7xl font-sofia mb-8">Fietsverzekering</p>
+        
+          <p class="text-md md:text-xl">
+            Een goede fietsverzekering is essentieel voor extra gemoedsrust tijdens je fietstochten. 
+            Of je nu op zoek bent naar bescherming tegen diefstal of een uitgebreide omniumverzekering, wij hebben de oplossing voor jou.
+            Met onze verzekeringen bieden we niet alleen financiële bescherming, maar ook gemoedsrust, wetende dat je goed gedekt bent.      
+            Neem vandaag nog contact met ons op voor meer informatie en laat ons jou helpen om de juiste verzekering te vinden die past bij jouw behoeften en budget.  
+          </p>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+   <div class="max-w-screen-xl md:mx-auto px-6 py-10 bg-primary-white md:mt-10">
+    <div class="bg-primary-white lg:py-0">
+        <h2 class="text-lg md:text-xl mb-2 font-semibold font-sofia">Heb je vragen over onze verzekeringen of wil je een verzekering aanvragen? Neem dan nu contact met ons op.</h2>
+        <p class="text-md md:text-xl mb-8 ">
+          Vul hieronder de details van je fiets in, zoals het merk, model en eventuele specifieke problemen of onderhoudsbehoeften die je hebt. Laat ons weten wat er moet gebeuren en wij zullen zo spoedig mogelijk contact met je opnemen om de details te bespreken en een passende oplossing te vinden.
+        </p> 
+        <form class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-85p sm:w-90p lg:w-4/5 font-inter" id="myForm">
+    <div class="sm:col-span-1">
+        <input id="voornaam" class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10" placeholder="Voornaam" />
+        <span id="voornaamError" class="text-red-500 text-sm hidden">Voornaam is verplicht</span>
+    </div>
+    <div class="sm:col-span-1">
+        <input id="achternaam" class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10" placeholder="Achternaam" />
+        <span id="achternaamError" class="text-red-500 text-sm hidden">Achternaam is verplicht</span>
+    </div>
+
+    <div class="sm:col-span-1">
+        <input id="email" class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10" placeholder="E-mailadres" />
+        <span id="emailError" class="text-red-500 text-sm hidden">Email is verplicht</span>
+    </div>
+    <div class="sm:col-span-1">
+        <input id="telefoonnummer" class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10" placeholder="Telefoonnummer" />
+        <span id="telefoonnummerError" class="text-red-500 text-sm hidden">Telefoonnummer is verplicht</span>
+    </div>
+    <div class="sm:col-span-1">
+        <div class="relative inline-block w-full">
+            <select class="block appearance-none w-full bg-primary-white border-nav-text-green border-2 text-nav-text-green py-2 px-2 pr-8 leading-tight focus:outline-none focus:bg-primary-white focus:border-gray-500">
+                <option selected disabled>Type fiets</option>
+                <option>Elektrischefiets</option>
+                <option>Racefiets</option>
+                <option>Mannenfiets</option>
+                <option>Vrouwenfiets</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#557260" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="sm:col-span-2">
+        <div class="mt-4">
+            <input type="checkbox" id="agree1" name="agree1" class="bg-transparent border-2 border-nav-text-green rounded-1 pb-1 footer-form w-6 h-6 mr-2" />
+            <label for="agree1">Ik ontvang graag de nieuwsbrief</label>
+        </div>
+        <div class="mt-4">
+            <input type="checkbox" id="agree2" name="agree2" class="bg-transparent border-2 border-nav-text-green rounded-1 pb-1 footer-form w-6 h-6 mr-2" />
+            <label for="agree2">Ik ga akkoord met het privacy statement</label>
+        </div>
+    </div>
+
+    <div class="sm:col-span-2 text-left xl:text-right">
+        <button type="submit" id="submitButton" class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-sofia border-2 border-nav-text-green transition-colors duration-400 delay-50 hover:bg-primary-white hover:text-nav-text-green">
+                Verzenden
+            </button>
+    </div>
+</form>
+
+    </div> 
+</div>
+{% include 'footer.twig' %}<a href="#top" class="fixed right-4 text-xs  bottom-4 text-white bg-fixed-nav-green p-2 rounded-full px-4 shadow-lg z-50"> Terug naar boven </a>
+
+
+</body>
+
+<script>
+
+    const form = document.getElementById('myForm');
+    const submitButton = document.getElementById('submitButton');
+
+    submitButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        
+        if (validateForm()) {
+            form.submit();
+        } else {
+        }
+    });
+
+    function validateForm() {
+        let isValid = true;
+
+        const voornaam = document.getElementById('voornaam').value.trim();
+        const voornaamError = document.getElementById('voornaamError');
+        const achternaam = document.getElementById('achternaam').value.trim();
+        const achternaamError = document.getElementById('achternaamError');
+        const telefoonnummer = document.getElementById('telefoonnummer').value.trim();
+        const telefoonnummerError = document.getElementById('telefoonnummerError');
+        const email = document.getElementById('email').value.trim();
+        const emailError = document.getElementById('emailError');
+
+        if (voornaam === '') {
+            voornaamError.classList.remove('hidden');
+            isValid = false;
+        } else {
+            voornaamError.classList.add('hidden');
+        }
+        if (achternaam === '') {
+            achternaamError.classList.remove('hidden');
+            isValid = false;
+        } else {
+            achternaamError.classList.add('hidden');
+        }
+         if (telefoonnummer === '') {
+            telefoonnummerError.classList.remove('hidden');
+            isValid = false;
+        } else {
+            telefoonnummerError.classList.add('hidden');
+        }
+         if (email === '') {
+            emailError.classList.remove('hidden');
+            isValid = false;
+        } else {
+            emailError.classList.add('hidden');
+        }
+        return isValid;
+    }
+</script>
+
+
+
+<style>
+    input[type='checkbox'] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        border: 2px solid #36493D;
+        border-radius: 1px;
+        position: relative;
+      }
+  
+      input[type='checkbox']:checked::before {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 10px;
+        border: solid #36493D;
+        border-width: 0 2px 2px 0;
+        top: 2px;
+        left: 7px;
+        transform: rotate(45deg);
+      }
+  </style>
+

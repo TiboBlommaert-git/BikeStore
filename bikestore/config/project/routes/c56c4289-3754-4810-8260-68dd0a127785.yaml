@@ -1,0 +1,6 @@
+siteUid: null
+sortOrder: 8
+template: faq
+uriParts:
+  - 'http://localhost/2023-2024-atelier4-bs-groep4/bikestore/web/faq'
+uriPattern: 'http://localhost/2023-2024-atelier4-bs-groep4/bikestore/web/faq'

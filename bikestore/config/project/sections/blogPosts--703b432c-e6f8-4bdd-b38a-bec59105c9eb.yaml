@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: blogPosts
+name: Blog-posts
+propagationMethod: all
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    enabledByDefault: true
+    hasUrls: true
+    template: blog-posts/_entry
+    uriFormat: 'blog-posts/{slug}'
+type: channel

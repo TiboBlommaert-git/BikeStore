@@ -1,0 +1,36 @@
+.animate-bike {
+    animation: moveBike 3s ease forwards;
+  }
+  
+  .animate-bike-end {
+    animation: moveBikeToEnd 1s ease forwards;
+  }
+  
+  @keyframes moveBike {
+    0% {
+      transform: translateX(-75%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes moveBikeToEnd {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-75%);
+    }
+  }
+  
+  .off-screen {
+    position: absolute;
+    left: -100%; /* Plaats de fiets helemaal links buiten het scherm */
+  }
+  
+  .flip-image {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  

@@ -1,0 +1,109 @@
+tabs:
+  -
+    elementCondition: null
+    elements:
+      -
+        elementCondition: null
+        fieldUid: e86f31ec-a9ef-42b9-a2a5-ecd6f9e92309 # Straat
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 2162fcfd-d27a-499d-ace0-d30f57895fc1
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: bb9f529a-8505-4c27-ba6a-2789527f2f4d # Huisnummer
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 03b2a46b-e8ed-4ee4-aa70-6954e1d05a96
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: b2602c41-49d4-40d2-b8f2-3b8782891d4e # Provincie
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: c68afe0a-f64e-44c9-8424-fe2768fc9561
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: 40eb0131-dde7-4440-8453-3e7f4f2a020a # Postcode
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 004dfc42-faf2-4b0b-8ca6-58df527cf5c2
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: 99457ad2-2238-4d32-8644-9572d73d5349 # Stad
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 2105ab95-30d1-4d38-a388-80a8f848cca6
+        userCondition: null
+        warning: null
+        width: 100
+    name: Adress
+    uid: 589c97f1-d14e-4d8c-b5b4-281969eb6661
+    userCondition: null
+  -
+    elementCondition: null
+    elements:
+      -
+        elementCondition: null
+        fieldUid: a17bcf30-65d9-4d07-b5ac-142e824951ae # Email
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 5f24010c-d58f-42ff-bd0f-3c12d5c57bf1
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: be95649b-56e4-43bd-8d3d-fe5fc3234851 # Naam
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 957bfeef-d244-4a9a-9b43-ade3bbb8ae9a
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: 55b508e4-a07d-461e-b9e8-1f1f6168e0de # Telefoonnummer
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 85a00e5e-c907-4e3b-8d1f-e485569217f7
+        userCondition: null
+        warning: null
+        width: 100
+    name: Gebruiker
+    uid: 3f32cd7b-023b-4dcd-a59c-a0c9ca36b6e4
+    userCondition: null

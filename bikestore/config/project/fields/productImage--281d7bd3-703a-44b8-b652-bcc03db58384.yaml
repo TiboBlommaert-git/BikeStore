@@ -1,0 +1,37 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 3d9dfd4a-eed7-47ec-b7f6-485273913bf4 # Bikes
+handle: productImage
+instructions: null
+name: 'Product image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds: null
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:66dc5d38-bc2b-4197-8432-32cf8d6d2666' # assets
+  defaultUploadLocationSubpath: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  previewMode: full
+  restrictFiles: false
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:66dc5d38-bc2b-4197-8432-32cf8d6d2666' # assets
+  restrictedLocationSubpath: null
+  selectionLabel: 'Upload image'
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources:
+    - 'volume:66dc5d38-bc2b-4197-8432-32cf8d6d2666' # assets
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

@@ -1,0 +1,6 @@
+siteUid: null
+sortOrder: 6
+template: verhaal
+uriParts:
+  - 'http://localhost/2023-2024-atelier4-bs-groep4/bikestore/web/verhaal'
+uriPattern: 'http://localhost/2023-2024-atelier4-bs-groep4/bikestore/web/verhaal'

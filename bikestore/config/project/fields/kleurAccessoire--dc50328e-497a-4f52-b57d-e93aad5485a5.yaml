@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: b04bcee3-447a-4b35-b88b-43b89be444a0 # zadel
+handle: kleurAccessoire
+instructions: null
+name: 'Kleur accessoire'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_kleuraccessoire}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

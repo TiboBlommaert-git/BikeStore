@@ -1,0 +1,6 @@
+siteUid: null
+sortOrder: 11
+template: proefrit
+uriParts:
+  - 'http://localhost/2023-2024-atelier4-bs-groep4/bikestore/web/proefrit'
+uriPattern: 'http://localhost/2023-2024-atelier4-bs-groep4/bikestore/web/proefrit'

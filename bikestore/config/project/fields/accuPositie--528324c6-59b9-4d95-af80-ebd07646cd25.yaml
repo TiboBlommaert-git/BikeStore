@@ -1,0 +1,35 @@
+columnSuffix: novwptch
+contentColumnType: string(12)
+fieldGroup: f8eb45e1-fcba-46b0-99b2-3d345ac5a82c # Motor
+handle: accuPositie
+instructions: null
+name: 'Accu positie'
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Aan fiets'
+        -
+          - value
+          - aanFiets
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Niet aan fiets'
+        -
+          - value
+          - nietAanFiets
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

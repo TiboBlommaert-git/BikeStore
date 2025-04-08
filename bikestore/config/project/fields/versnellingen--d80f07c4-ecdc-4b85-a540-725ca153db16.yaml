@@ -1,0 +1,90 @@
+columnSuffix: yqembpil
+contentColumnType: string(15)
+fieldGroup: 3d9dfd4a-eed7-47ec-b7f6-485273913bf4 # Bikes
+handle: versnellingen
+instructions: null
+name: Versnellingen
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - '5 Versnellingen'
+        -
+          - value
+          - 5Versnellingen
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '6 Versnellingen'
+        -
+          - value
+          - 6Versnellingen
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '7 Versnellingen'
+        -
+          - value
+          - 7Versnellingen
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '8 Versnellingen'
+        -
+          - value
+          - 8Versnellingen
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '9 Versnelligen'
+        -
+          - value
+          - 9Versnelligen
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '10 Versnellingen'
+        -
+          - value
+          - 10Versnellingen
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - ''
+        -
+          - value
+          - ''
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

@@ -1,0 +1,19 @@
+columnSuffix: zttfdtkd
+contentColumnType: text
+fieldGroup: 7fe5120c-a9cc-44f5-8a2b-da4c27ae4bea # Address
+handle: provincie
+instructions: null
+name: Provincie
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

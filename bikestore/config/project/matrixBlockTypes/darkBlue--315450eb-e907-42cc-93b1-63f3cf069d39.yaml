@@ -1,0 +1,39 @@
+field: 25a2e0cf-475e-4acc-a7ad-b5f52c5fa4be # Product colours
+fieldLayouts:
+  605f5e53-06b7-4d17-bf6d-8548e82450ac:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: bbba564c-e53d-4f37-a28c-497e983e93d7 # Dark blue
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1c3e6b59-b3ef-4de5-ad1f-006aff91ee43
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1c974e9f-cdb9-4060-ad2a-98d71755809d
+        userCondition: null
+fields:
+  bbba564c-e53d-4f37-a28c-497e983e93d7: # Dark blue
+    columnSuffix: xehudkih
+    contentColumnType: char(7)
+    fieldGroup: null
+    handle: darkBlue
+    instructions: null
+    name: 'Dark blue'
+    searchable: false
+    settings:
+      defaultColor: '#394261'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+handle: darkBlue
+name: 'Dark blue'
+sortOrder: 4

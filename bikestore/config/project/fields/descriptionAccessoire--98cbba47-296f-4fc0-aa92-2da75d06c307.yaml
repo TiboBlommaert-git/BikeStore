@@ -1,0 +1,19 @@
+columnSuffix: buieogqh
+contentColumnType: text
+fieldGroup: b04bcee3-447a-4b35-b88b-43b89be444a0 # zadel
+handle: descriptionAccessoire
+instructions: null
+name: 'description accessoire'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

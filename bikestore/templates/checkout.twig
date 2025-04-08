@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Bikestore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <script src="{{siteUrl}}vue-assets/js/checkout1.js"></script>
+    <link rel="stylesheet" href="{{siteUrl}}vue-assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="{{siteUrl}}/vue-assets/assets/favicon.ico">
+</head>
+
+<body class="bg-primary-white">
+{% include 'upper-navbar.twig' %}
+
+{% include 'navbar.twig' %}
+
+<div class="max-w-screen-xl relative lg:px-30 px-6 md:pt-10 md:pb-10 md:px-20 lg:pb-5 lg:pt-5 mx-auto mt-7">
+    <div class="flex justify-between mb-2">
+        <img src="vue-assets/assets/cart-shopping-checkout.svg" class="h-6 w-6" alt="cart">
+        <img src="vue-assets/assets/account-checkout.svg" class="h-6 w-6" alt="check">
+        <img src="vue-assets/assets/card-checkout.svg" class="h-6 w-6" alt="card">
+        <img src="vue-assets/assets/check-checkout.svg" class="h-6 w-6" alt="checkk">
+    </div>
+    <div class="bg-unieke-services-green h-2 relative w-full"></div>
+</div>
+
+<div class="max-w-screen-xl mx-auto px-4 mt-20">
+   <div class="grid grid-cols-6 gap-4">
+    <p class="text-nav-text-green font-medium text-xl col-span-6 lg:col-span-2">Product</p>
+    <p class="text-nav-text-green font-medium text-xl hidden lg:block">Kleur</p>
+    <p class="text-nav-text-green font-medium text-xl hidden lg:block">Maat</p>
+    <p class="text-nav-text-green font-medium text-xl hidden lg:block">Aantal</p>
+    <p class="text-nav-text-green font-medium text-xl hidden lg:block">Prijs</p>
+</div>
+
+<hr class="h-200px my-2 bg-nav-text-green w-full border-1 border-nav-text-green">
+{% set cart = craft.commerce.carts.cart %}
+{% for item in cart.lineItems %}
+    {# {% set image = item.productImage.one() %} #}
+    <form method="post" class="update-cart-form">
+        {{ csrfInput() }}
+        {{ actionInput('commerce/cart/update-cart') }}
+        {# <h1>{{item.options}}</h1> #}
+<div class="grid grid-cols-6 gap-4 items-center">
+    <div class="max-w-screen-xl px-4 flex items-center col-span-6 lg:col-span-2">
+        {# {% for option in item.options.colors %}
+        {% if option %}
+        <h1>{{option}}</h1>
+        {% endif %}
+        {% endfor %} #}
+         {% if item.options.image is defined %}
+            <ul>
+                    {% for image in item.options.image %}
+                        <img src="{{ image }}" class="h-30" alt="cart">
+                    {% endfor %}
+                </ul>
+        {% endif %}
+        <div class="ml-4">
+            <p class="text-sm"><p>{{ item.description }}</p><br>
+            {% if item.options.merk is defined %}
+                {% for merk in item.options.merk %}
+                <span class="font-medium text-sm text-nav-text-green">
+                    {{merk}}
+                </span>
+                {% endfor %}
+            {% endif %}
+            </p>
+            <div class="mt-4 flex items-center"> 
+                <input
+                    type="checkbox"
+                    id="agree1"
+                    name="agree1"
+                    class="bg-transparent border-2 border-nav-text-green rounded-1 pb-1 footer-form w-6 h-6 mr-2"
+                />
+                <label class="text-xs" for="agree1">Fietsverzekering</label>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col lg:flex-row col-span-6 sm:col-span-3 lg:col-span-1">
+        {# <label for="color" class="sr-only">Kies je kleur</label>
+        <select id="color" class="block w-full sm:w-38 lg:w-auto bg-primary-white border-nav-text-green border-2 py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-primary-white focus:border-nav-text-green mb-4 lg:mb-0 lg:h-auto" style="height: 2.5rem;">
+            <option selected disabled>Kies je kleur</option>
+            <option>Grijs</option>
+            <option>Blauw</option>
+            <option>Rood</option>
+        </select> #}
+        {% if item.options.colors is defined %}
+            <ul>
+                    {% for color in item.options.colors %}
+                        <li>{{ color }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+    </div>
+    <div class="flex flex-col lg:flex-row col-span-6 sm:col-span-3 lg:col-span-1">
+        <label for="size" class="sr-only">Kies je maat</label>
+        {# <select id="size" class="block w-full sm:w-38 lg:w-auto bg-primary-white border-nav-text-green border-2 py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-primary-white focus:border-nav-text-green mb-4 lg:mb-0 lg:h-auto" style="height: 2.5rem;">
+            <option selected disabled>Kies je maat</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+        </select> #}
+        {% if item.options.maat is defined %}
+                <ul>
+                    {% for maat in item.options.maat %}
+                        <li>{{ maat }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+    </div>
+    <div class="flex items-center col-span-6  lg:col-span-1">
+        <div class="flex tw-justify-between relative">
+            {# <p class="text-nav-text-green bg-transparent absolute cursor-pointer" onclick="decreaseQuantity()">-</p> #}
+            {# <input class="c-winkelwagen__input js-input" type="number" name="lineItems[{{ item.id }}][qty]" min="1" value="{{ item.qty }}"> #}
+            {# <input type="number" class="w-30 bg-primary-white border-nav-text-green border-2 py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-center js-input" name="lineItems[{{ item.id }}][qty]" min="1" value="{{ item.qty }}" min="1" id="quantity" />
+            <p class="text-nav-text-green bg-transparent absolute cursor-pointer" onclick="increaseQuantity()">+</p> #}
+            <input class="w-20 bg-primary-white border-nav-text-green border-2 py-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-center js-input" type="number" name="lineItems[{{ item.id }}][qty]" min="1" value="{{ item.qty }}">
+
+        </div>
+    </div>
+     <div class="flex items-center col-span-6 lg:col-span-1 justify-between">
+            <p class="text-nav-text-green text-xl font-semibold">€{{item.price}}</p>
+            <button type="submit" name="lineItems[{{ item.id }}][remove]" value="{{ item.id }}">
+                <img src="vue-assets/assets/trash.svg" alt="">        
+            </button>
+    </div>
+</div>
+</form>
+{% endfor %}
+<hr class="h-200px my-2 bg-nav-text-green w-full border-1 border-nav-text-green">
+</div>
+
+<div class="font-inter grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-screen-xl mx-auto px-4 mt-60 mb-20 justify-items-start">
+        <div class="col-span-1 sm:col-span-1 lg:col-span-1 flex items-center justify-center sm:justify-self-end md:justify-self-start order-3 md:order-1">
+            <button class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-inter border border-white transition-colors duration-400 delay-50 hover:bg-unieke-services-green flex items-center">
+                Verder winkelen
+                <img src="vue-assets/assets/backpijl.svg" alt="whitepijl" class="mr-2 h-3">
+            </button>
+        </div>
+        <div class="col-span-1 sm:col-span-1 lg:col-span-2 sm:justify-self-start lg:justify-self-end md:justify-self-center order-2 md:order-2">
+            <div class="font-inter flex">
+                <input placeholder="Kortingscode" class="placeholder:text-black bg-primary-white appearance-none border-2 border-nav-text-green py-2 px-4 text-nav-text-green leading-tight focus:outline-none focus:text-primary-white focus:bg-nav-text-green w-full" type="text">
+                <button class="bg-nav-text-green text-primary-white font-regular -ml-1 py-2 px-4 rounded-1px font-inter transition-colors duration-400 delay-50 hover:bg-unieke-services-green">Toevoegen</button>
+            </div>
+        </div>
+        <div class="col-span-1 sm:col-span-1 lg:col-span-1 flex items-center sm:justify-self-end lg:justify-self-start order-1 md:order-3">
+            <p class="text-nav-text-green font-semibold text-xl">Totaal {% if cart %}{{ cart.totalPrice|currency(cart.currency) }}{% endif %}</p>
+        </div>
+        <div class="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-1 md:justify-self-end flex items-center justify-center order-4 md:order-4">
+            <a href="{{siteUrl}}check">
+                <button class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-inter border border-white transition-colors duration-400 delay-50 hover:bg-unieke-services-green flex items-center">
+                    Volgende
+                    <img src="vue-assets/assets/whitepijl.svg" alt="whitepijl" class="ml-2 h-3">
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+{% include 'footer.twig' %}
+
+</body>
+
+<style lang="css">input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 15px;
+  height: 15px;
+  background: transparent;
+  border: 2px solid #557260;
+  border-radius: 1px;
+  position: relative;
+}
+
+input[type='checkbox']:checked::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 7px;
+  border: solid #557260;
+  border-width: 0 2px 2px 0;
+  top: 2px;
+  left: 4px;
+  transform: rotate(45deg);
+}
+</style>
+<script>
+    document.addEventListener('input', function (event) {
+        if (event.target && event.target.classList.contains('js-input')) {
+            event.target.closest('.update-cart-form').submit();
+        }
+    });
+
+    document.addEventListener('click', function (event) {
+        if (event.target && event.target.name === 'removeItem') {
+            event.preventDefault();
+            let form = event.target.closest('.update-cart-form');
+            let confirmDelete = confirm('Are you sure you want to remove this item?');
+            if (confirmDelete) {
+                form.submit();
+            }
+        }
+    });
+</script>

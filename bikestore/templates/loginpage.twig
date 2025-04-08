@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Bikestore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <script src="{{siteUrl}}/vue-assets/js/checkout1.js"></script>
+    <link rel="stylesheet" href="{{siteUrl}}/vue-assets/css/style.css">
+    <link rel="stylesheet" href="{{siteUrl}}/vue-assets/css/checkbox.css">
+
+     <link rel="icon" type="image/x-icon" href="{{siteUrl}}/vue-assets/assets/favicon.ico">
+</head>
+
+<body class="bg-primary-white"><div id="top"></div>
+
+
+{% include 'upper-navbar.twig' %}
+
+{% include 'navbar.twig' %}
+<div class="flex flex-col justify-center items-center mt-6 lg:mt-12 md:px-0 px-6"> 
+{% if currentUser %}
+			{% if currentUser.admin %}
+			{% redirect 'admin/dashboard' %}
+			{% else %}
+			<p class="login-text text-center mb-4">Je bent al ingelogd als
+				{{ currentUser.username }}.</p>
+			<p class="text-center mt-3">
+				<a href="{{ url('logout') }}" ><button class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-sofia border-2 border-nav-text-green transition-colors duration-400 delay-50 hover:bg-primary-white hover:text-nav-text-green">Uitloggen</button></a>
+			</p>
+			{% endif %}
+			{% else %}
+      
+<img src="vue-assets/assets/bikestore-logo-nav.png" alt="logo" class="w-60 mb-8">
+    <form class="text-nav-text-green md:w-96" method="post" accept-charset="UTF-8">
+        	{{ csrfInput() }}
+				{{ actionInput('users/login') }}
+          <label for="loginName" class="mb-2 text-sm">Gebruikersnaam</label>
+        {{ input('text', 'loginName', craft.app.user.rememberedUsername, {
+					id: 'loginName',
+					autocomplete: 'username',
+					class: 'bg-transparent border-2 border-nav-text-green rounded-1 pl-3 mt-4 footer-form w-full h-10',
+					}) }}
+         {#  <input class="bg-transparent border-2 border-nav-text-green rounded-1 pl-3 mb-4 footer-form w-full h-10" 	id='loginName' placeholder="Emailadres" type="text"/> #}
+          <label for="password" class="mb-2 mt-4 text-sm">Wachtwoord</label>
+       {{ input('password', 'password', null, {
+					id: 'password',
+					class: 'bg-transparent border-2 border-nav-text-green rounded-1 pl-3 mt-4 footer-form w-full h-10'
+					}) }}
+          {# <input class="bg-transparent border-2 border-nav-text-green rounded-1 pl-3 footer-form w-full h-10"	id='password' placeholder="Wachtwoord" type="text"/> #}
+       {% if errorMessage is defined %}
+				<p class="error-message">{{ errorMessage }}</p>
+				{% endif %}
+        <div class="flex items-center mt-5 sm:col-span-2">
+          <input type="checkbox" id="rememberMe" name="rememberMe" class="bg-transparent border-2 border-white rounded-1 pb-1 footer-form w-6 h-6 mr-2" />
+          <label class="text-sm font-regular" for="rememberMe">Hou me ingelogd</label>
+        </div>
+         
+        <div class="text-center lg:col-span-2 lg:mt-10 mt-6">
+          <button class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-sofia border-2 border-nav-text-green transition-colors duration-400 delay-50 hover:bg-primary-white hover:text-nav-text-green">Inloggen</button>
+        </div>
+      
+        <p class="text-center mt-20">
+				<a href="{{ url('registerpage') }}">Nog geen account? Maak hier jouw account aan!</a>
+			</p>
+			{% endif %}
+
+      </form>
+</div>
+{% include 'footer.twig' %}<a href="#top" class="fixed right-4 text-xs  bottom-4 text-white bg-fixed-nav-green p-2 rounded-full px-4 shadow-lg z-50"> Terug naar boven </a>
+
+</body>
+<style>
+.error-message {
+  color: #B22222;
+}
+</style>
+

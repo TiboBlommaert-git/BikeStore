@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Bikestore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <script src="{{siteUrl}}/vue-assets/js/checkout1.js"></script>
+    <link rel="stylesheet" href="{{siteUrl}}/vue-assets/css/style.css">
+
+     <link rel="icon" type="image/x-icon" href="{{siteUrl}}/vue-assets/assets/favicon.ico">
+</head>
+
+<body class="bg-primary-white">
+{% include 'upper-navbar.twig' %}
+{% include 'navbar.twig' %}
+{% set cart = craft.commerce.carts.cart %}
+<div class="max-w-screen-xl relative lg:px-30 md:pt-10 md:pb-10 md:px-20 lg:pb-5 lg:pt-5 mx-auto mt-7">
+  <div class="relative lg:px-30 md:pt-10 md:pb-10 md:px-20 lg:pb-5 lg:pt-5">
+    <div class="flex justify-between mb-2">
+    <img src="vue-assets/assets/cart-shopping-checkout.svg" class="h-6 w-6" alt="cart">
+    <img src="vue-assets/assets/account-checkout.svg" class="h-6 w-6" alt="check">
+    <img src="vue-assets/assets/card-checkout.svg" class="h-6 w-6" alt="card">
+    <img src="vue-assets/assets/check-checkout.svg" class="h-6 w-6" alt="checkk">
+</div>
+
+    <div class="bg-unieke-services-green h-2 relative w-full">
+    <div class="bg-nav-text-green h-2 absolute top-0 left-0" style="width: 33.7%;"></div>
+  </div>
+
+
+
+  <div class="max-w-screen-xl md:mx-auto px-6 py-10 bg-primary-white mt-20">
+    <div class="bg-primary-white py-20 lg:py-0 flex justify-center flex-wrap">
+        <h2 class="text-2xl mb-8 font-semibold font-sofia">Een proefrit bij jou thuis of op het bedrijf is volledig gratis en uiteraard vrijblijvend.</h2>
+
+        <div class="grid grid-cols-2 gap-4 md:gap-8 font-inter mb-8">
+   
+          <button
+              class="bg-unieke-services-green text-primary-white font-regular py-2 px-4 rounded-1px font-sofia transition-colors duration-400 delay-50 hover:bg-unieke-services-green hover:text-primary-white"
+          >
+          Levering aan huis
+          </button>
+
+          <button
+          class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-sofia transition-colors duration-400 delay-50 hover:bg-unieke-services-green hover:text-primary-white"
+          >
+          Ophalen in de winkel
+          </button>
+         
+        </div>
+{# 
+        <form class="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-8 w-85p sm:w-90p lg:w-4/5 font-inter">
+          <div>
+           <input
+                type="text"
+                class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green::placeholder rounded-1 pb-1 pl-2 footer-form w-full h-10 mt-4"
+                placeholder="Naam"
+            />
+            <input
+                class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10 mt-4"
+                placeholder="Telefoonnummer"
+            />
+
+            <div class="relative inline-block w-full mt-4">
+              <select
+                  class="block appearance-none w-full bg-primary-white border-nav-text-green border-2 text-nav-text-green py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-primary-white focus:border-gray-500">
+                  <option selected disabled>Land</option>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="#557260" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M6 9l6 6 6-6" />
+                  </svg>
+              </div>
+            </div>
+
+            <input
+            class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10 mt-4"
+            placeholder="Postcode"
+            />
+
+             
+            <input
+            class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10 mt-4"
+            placeholder="Huisnummer"
+            />
+
+          </div>
+        
+          <div>
+              <input
+                  class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10 mt-4"
+                  placeholder="Achternaam"
+              />
+              <input
+                  class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10 mt-4"
+                  placeholder="E-mailadres"
+              />
+              
+              <input
+              class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10 mt-4"
+              placeholder="Stad"
+              />
+
+              <input
+              class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10 mt-4"
+              placeholder="Adres"
+              />
+
+              <input
+              class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10 mt-4"
+              placeholder="Busnummer"
+              />
+
+            </div>
+        </form> #}
+
+        <form method="post">
+            {{ csrfInput() }} 
+            {{ actionInput('commerce/cart/update-cart') }}
+            {{ redirectInput(siteUrl ~ '/checkoutStap3') }}
+             {# <input type="text" placeholder="Naam" class="mb-2" value="{% if cart.customer %}
+            {{ cart.customer.name }}
+            {% else %}
+            {% endif %}">
+            <input type="email" placeholder="Email" class="mb-2" value="{% if cart.customer %}
+            {{ cart.customer.email }}
+            {% else %}
+            {% endif %}"> #}
+            {#
+            <input type="number" placeholder="Telefoonnummer" class="mb-2">
+            <select name="land" id="land" class="mb-2">
+                <option value="belgie">België</option>
+                <option value="nederland">Nederland</option>
+            </select>
+            <input type="text" placeholder="Stad" class="mb-2" value="">
+            <input type="text" placeholder="Adres" class="mb-2" value="">
+            <input type="number" placeholder="Postcode" class="mb-2" value="">
+            <input type="number" placeholder="Huisnummer" class="mb-2" value="">
+            <input type="number" placeholder="Busnummer" class="mb-2" value=""> #}
+            {# <label>
+                Naam
+                {{ input('text', 'fields[stad]', cart.stad) }}
+            </label> #}
+             {# <input class="bg-transparent border-2 border-nav-text-green text-nav-text-green rounded-1 pb-1 inputfields w-full h-10 mb-5" placeholder="Postcode" /> #}
+            <label>
+                Email
+                    {{ input('email', 'fields[email]', cart.email, { 'class': 'bg-transparent border-2 border-nav-text-green text-nav-text-green rounded-1 pb-1 pl-1 inputfields w-full h-10 mb-5' }) }}
+            </label>
+            <label>
+                Naam
+                {{ input('text', 'fields[naam]', cart.naam, { 'class': 'bg-transparent border-2 border-nav-text-green text-nav-text-green rounded-1 pb-1 pl-1 inputfields w-full h-10 mb-5' }) }}
+            </label>
+            <label>
+                Stad
+                {{ input('text', 'fields[stad]', cart.stad, { 'class': 'bg-transparent border-2 border-nav-text-green text-nav-text-green rounded-1 pb-1 pl-1 inputfields w-full h-10 mb-5' }) }}
+            </label>
+            <label>
+                Provincie
+                {{ input('text', 'fields[provincie]', cart.provincie, { 'class': 'bg-transparent border-2 border-nav-text-green text-nav-text-green rounded-1 pb-1 pl-1 inputfields w-full h-10 mb-5' }) }}
+            </label>
+            <label>
+                Straat
+                {{ input('text', 'fields[straat]', cart.straat, { 'class': 'bg-transparent border-2 border-nav-text-green text-nav-text-green rounded-1 pb-1 pl-1 inputfields w-full h-10 mb-5' }) }}
+            </label>
+            <label>
+                Postcode
+                {{ input('number', 'fields[postcode]', cart.postcode, { 'class': 'bg-transparent border-2 border-nav-text-green text-nav-text-green rounded-1 pb-1 pl-1 inputfields w-full h-10 mb-5' }) }}
+            </label>
+            <label>
+                Huisnummer
+                {{ input('number', 'fields[huisnummer]', cart.huisnummer, { 'class': 'bg-transparent border-2 border-nav-text-green text-nav-text-green rounded-1 pb-1 pl-1 inputfields w-full h-10 mb-5' }) }}
+            </label>
+            <label for="country">Land
+            <select id="country" name="fields[land]" class="bg-transparent border-2 border-nav-text-green text-nav-text-green rounded-1 pb-1 pl-1 inputfields w-full h-10 mb-5">
+                <option value="belgie" {% if cart.land == 'belgie' %}selected{% endif %}>België</option>
+                <option value="nederland" {% if cart.land == 'nederland' %}selected{% endif %}>Nederland</option>
+            </select>
+            </label>
+            <label>
+                Telefoonnummer
+                {{ input('number', 'fields[telefoonnummer]', cart.telefoonnummer, { 'class': 'bg-transparent border-2 border-nav-text-green text-nav-text-green rounded-1 pb-1 pl-1 inputfields w-full h-10 mb-5' }) }}
+            </label>
+
+            {# <label>
+                label (Shipping)
+            <input type="text" id="shipping_stad" name="fields[shippingAddress][label]" value="{{ cart.shippingAddress.title }}">
+        </label> #}
+        {# <label>
+            Provincie (Shipping)
+            <input type="text" id="shipping_provincie" name="fields[shippingAddress][adress]" value="{{ cart.shippingAddress.addressRule1 }}">
+        </label>
+        <label>
+            Plaats (Shipping)
+            <input type="text" id="shipping_straat" name="fields[shippingAddress][plaats]" value="{{ cart.shippingAddress.plaats }}">
+        </label>
+        <label>
+            Postcode (Shipping)
+            <input type="number" id="shipping_postcode" name="fields[shippingAddress][postcode]" value="{{ cart.shippingAddress.postcode }}">
+        </label>
+        <label for="shipping_country">
+            Land (Shipping)
+            <select id="shipping_country" name="fields[shippingAddress][land]" class="mb-2">
+                <option value="belgie" {% if cart.shippingAddress.countryCode == 'belgie' %}selected{% endif %}>België</option>
+                <option value="nederland" {% if cart.shippingAddress.countryCode == 'nederland' %}selected{% endif %}>Nederland</option>
+            </select>
+        </label> #}
+        <div class="flex justify-between">
+            <button class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-inter border border-white transition-colors duration-400 delay-50 hover:bg-unieke-services-green flex items-center">
+                <img src="vue-assets/assets/backpijl.svg" alt="whitepijl" class="mr-2 h-5">
+                Verder winkelen
+            </button>
+            <div class="flex tw-justify-between bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-inter border border-white transition-colors duration-400 delay-50 hover:bg-unieke-services-green flex items-center">
+                <input type="submit" value="Submit" class="bg-transparent">
+                <img src="vue-assets/assets/whitepijl.svg" alt="whitepijl" class="ml-2 h-5">
+            </div>         
+        </div> 
+        </form>
+    </div> 
+  </div>
+
+ {#<div class="max-w-screen-xl md:mx-auto px-10 py-10 bg-primary-white mt-20">
+    <div class="bg-primary-white py-20 lg:py-0 flex justify-center flex-wrap">
+        <h2 class="text-2xl mb-8 font-semibold font-sofia">Een proefrit bij jou thuis of op het bedrijf is volledig gratis en uiteraard vrijblijvend.</h2>
+
+        <div class="grid grid-cols-2 gap-4 md:gap-8 font-inter mb-8">
+   
+          <button
+              class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-sofia transition-colors duration-400 delay-50 hover:bg-unieke-services-green hover:text-primary-white"
+          >
+          Levering aan huis
+          </button>
+
+          <button
+          class="bg-unieke-services-green text-primary-white font-regular py-2 px-4 rounded-1px font-sofia transition-colors duration-400 delay-50 hover:bg-unieke-services-green hover:text-primary-white"
+          >
+          Ophalen in de winkel
+          </button>
+         
+        </div>
+
+         <form class="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-8 w-85p sm:w-90p lg:w-4/5 font-inter">
+
+          <div>
+            <input
+                class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10 mt-4"
+                placeholder="Voornaam"
+            />
+            <input
+                class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10 mt-4"
+                placeholder="Telefoonnummer"
+            />
+
+
+          </div>
+        
+          <div>
+            
+              <input
+                  class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10 mt-4"
+                  placeholder="Achternaam"
+              />
+              <input
+                  class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10 mt-4"
+                  placeholder="E-mailadres"
+              />
+              
+
+            </div>
+          
+        </form> 
+    </div> 
+</div>#}
+</div>
+</div>
+{% include 'footer.twig' %}
+<a href="#top" class="fixed right-4 bottom-4 text-xs  text-white bg-fixed-nav-green p-2 rounded-full px-4 shadow-lg z-50"> Terug naar boven </a>
+
+
+</body>
+<style>
+
+</style>

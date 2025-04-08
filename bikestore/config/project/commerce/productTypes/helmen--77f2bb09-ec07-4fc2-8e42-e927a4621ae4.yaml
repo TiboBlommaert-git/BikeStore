@@ -1,0 +1,217 @@
+descriptionFormat: '{product.title} - {title}'
+handle: helmen
+hasDimensions: false
+hasProductTitleField: true
+hasVariantTitleField: false
+hasVariants: false
+name: Helmen
+productFieldLayouts:
+  75949e8b-cf11-4b00-badb-49b17c84f73a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\commerce\fieldlayoutelements\ProductTitleField
+            uid: 235ed7e6-311c-47fc-83fc-f64ea53aafdb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 59c88e68-f168-4654-886d-86842d6dcd1c # Product description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ab8ecc7c-5ab0-487c-a477-23939ddaafb8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ca93e26b-7c3b-4b95-822a-3c98dda646f3 # Merk accessoire
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 80f0c6f8-9738-4e0f-bd7e-6b6e476be027
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 281d7bd3-703a-44b8-b652-bcc03db58384 # Product image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e0a10429-57ec-4aa7-9ab7-77254b4dc480
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c57be9e7-ae3c-456a-bf61-032f24406178 # Product price
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 66b6efb7-bfdb-46c4-befd-c05fffd162c2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d09e2ac5-1251-4dcd-ab57-9b6721bd8b02 # Schedel omtrek
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6eafd298-1578-4506-8f8b-7dbdafb59472
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0450d24b-a001-4a90-9785-0be0627aef67 # features
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5e3be8be-d1fa-4d8a-a575-ef1ad3f1de71
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 20216e26-8489-4be7-b48e-987cead818ce # Type accessoire
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 40780fc4-5036-4b2d-88ac-a3a37239cb65
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5bb75326-9042-401f-b905-b830d1767d19 # Gewicht
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ca34a56c-3161-4d3d-b2f5-e8ac93b035f4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 08dc7f84-01d4-40de-a42a-84ed523b2ea4 # Merk
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fba0b2b8-87cf-4d0a-87fc-5af2e8101f30
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 25a2e0cf-475e-4acc-a7ad-b5f52c5fa4be # Product colours
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bd2c85d7-9f6b-4362-be85-b89b265fd05c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3edb0dfd-fbcd-472e-9179-2ffe6e3d8649 # Minpunten
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a8de1480-18dd-4bc5-983e-5704ea9f02a7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a83a6a9e-1c1d-45e3-8b67-cb6bd839b794 # pluspunten
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2d7a64f2-9069-4f71-b35e-071895cf8e08
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: aefc77b3-555e-4a21-bf10-04904078da97 # Gewicht accessoire
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c48adffd-f995-4f70-af24-e5afdb192d6e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\commerce\fieldlayoutelements\VariantsField
+            uid: d61d3135-7236-4679-94bf-b62b3e3dcbd0
+            userCondition: null
+            warning: null
+        name: Content
+        uid: 130c0eb1-1f4f-430c-b19a-f256374c4d00
+        userCondition: null
+productTitleFormat: ''
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    hasUrls: true
+    template: ''
+    uriFormat: 'helmen/{slug}'
+skuFormat: '{product.slug}'
+variantTitleFormat: '{product.title}'

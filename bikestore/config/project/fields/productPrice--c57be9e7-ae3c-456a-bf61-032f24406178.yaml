@@ -1,0 +1,17 @@
+columnSuffix: yklvmeba
+contentColumnType: integer(10)
+fieldGroup: 3d9dfd4a-eed7-47ec-b7f6-485273913bf4 # Bikes
+handle: productPrice
+instructions: null
+name: 'Product price'
+searchable: false
+settings:
+  currency: EUR
+  defaultValue: null
+  max: null
+  min: 0
+  showCurrency: true
+  size: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Money

@@ -1,0 +1,59 @@
+columnSuffix: uicgblil
+contentColumnType: text
+fieldGroup: 3d9dfd4a-eed7-47ec-b7f6-485273913bf4 # Bikes
+handle: productColours
+instructions: null
+name: 'Product colours'
+searchable: false
+settings:
+  addRowLabel: 'Add a row'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - colour
+            -
+              - handle
+              - colour
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - hexcode
+            -
+              - handle
+              - hexcode
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - ''
+        -
+          - col2
+          - ''
+  maxRows: null
+  minRows: null
+  staticRows: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

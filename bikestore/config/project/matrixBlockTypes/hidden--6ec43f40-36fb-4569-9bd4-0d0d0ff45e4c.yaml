@@ -1,0 +1,78 @@
+field: e728aeb2-c1a7-41ca-acbc-06c4b39ad3ff # Basic Form Fields
+fieldLayouts:
+  04dce5cf-2d50-4bc1-8cae-39a1143b5f51:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: bedf71e2-0e03-452d-a322-566329ccd4fd # Handle
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0639af04-3b62-4bff-a85d-c573e3b37488
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4463a274-5368-45e6-aed1-2af6b2d5e7b1 # Hidden Value
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2ec809a4-0494-4a25-bf10-0ad0e4b16ce1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: aac3ba40-f5b7-44e8-94ea-6ee6e5313ac4
+        userCondition: null
+fields:
+  4463a274-5368-45e6-aed1-2af6b2d5e7b1: # Hidden Value
+    columnSuffix: reermaxb
+    contentColumnType: text
+    fieldGroup: null
+    handle: hiddenValue
+    instructions: 'You can use twig code'
+    name: 'Hidden Value'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: '{{ craft.request.path }}'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  bedf71e2-0e03-452d-a322-566329ccd4fd: # Handle
+    columnSuffix: sxqmcjvu
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: 'This field will not visible in the form, just in the source code'
+    name: Handle
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: hidden
+name: Hidden
+sortOrder: 7

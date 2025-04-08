@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: accessoiresMeta
+name: AccessoiresMeta
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primaire invoer-pagina'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: single

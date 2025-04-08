@@ -1,0 +1,47 @@
+defaultPlacement: end
+fieldLayouts:
+  f1c2a03e-422c-46f1-b689-4d5c96d0b269:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 049f5e55-8bc8-4239-a5b0-ad0cac7bbb39
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 9dbde2db-8b6e-4a11-bab9-dfbea94e9cdb
+        userCondition: null
+handle: merkZadel
+name: 'Merk zadel'
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    hasUrls: true
+    template: null
+    uriFormat: 'merk-zadel/{slug}'
+structure:
+  maxLevels: null
+  uid: defb81bc-114e-479a-b278-22e79b6ab61b

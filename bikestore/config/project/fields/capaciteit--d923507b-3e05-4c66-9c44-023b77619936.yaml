@@ -1,0 +1,19 @@
+columnSuffix: ivltnhnb
+contentColumnType: text
+fieldGroup: f8eb45e1-fcba-46b0-99b2-3d345ac5a82c # Motor
+handle: capaciteit
+instructions: null
+name: Capaciteit
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

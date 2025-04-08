@@ -1,0 +1,71 @@
+fieldLayouts:
+  a8f31708-ce2c-469e-845c-1428c0d03ac0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 4614f124-f501-40bf-96d2-66ebe10b27e3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 983727ed-8ebc-4975-888c-dd5d217a186c # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 151bb97b-58e5-4388-a52d-ca4c91eea3b5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b5b91cb7-334f-431f-af73-253e820af38c # url
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 99bbe766-c161-4710-af8b-770832a1fc05
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: 381f10ec-77d1-4e8e-a3b9-992611ed5d99
+        userCondition: null
+handle: home
+hasTitleField: true
+name: Home
+section: 0fc2e7bb-880e-40f5-8d2f-06411eaee0cc # Home
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

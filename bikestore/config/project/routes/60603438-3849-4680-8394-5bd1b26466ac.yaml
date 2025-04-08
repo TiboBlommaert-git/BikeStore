@@ -1,0 +1,6 @@
+siteUid: null
+sortOrder: 1
+template: blog
+uriParts:
+  - 'http://localhost/2023-2024-atelier4-bs-groep4/bikestore/web/blog'
+uriPattern: 'http://localhost/2023-2024-atelier4-bs-groep4/bikestore/web/blog'

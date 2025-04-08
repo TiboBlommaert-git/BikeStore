@@ -1,0 +1,46 @@
+columnSuffix: lqlrptte
+contentColumnType: string(6)
+fieldGroup: b04bcee3-447a-4b35-b88b-43b89be444a0 # zadel
+handle: geslacht
+instructions: null
+name: Geslacht
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Man
+        -
+          - value
+          - man
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Vrouw
+        -
+          - value
+          - vrouw
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Unisex
+        -
+          - value
+          - unisex
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

@@ -1,0 +1,259 @@
+descriptionFormat: '{product.title} - {title}'
+handle: bike
+hasDimensions: false
+hasProductTitleField: true
+hasVariantTitleField: false
+hasVariants: false
+name: Bike
+productFieldLayouts:
+  04e74760-ef69-4b77-93b1-b17cee614961:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            heading: ''
+            type: craft\fieldlayoutelements\Heading
+            uid: 860ccba2-9b12-445a-b4e8-efc20ea52e63
+            userCondition: null
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\commerce\fieldlayoutelements\ProductTitleField
+            uid: bea4d310-79eb-460f-8871-791d4b597200
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 59c88e68-f168-4654-886d-86842d6dcd1c # Product description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b067e0b3-db26-4617-a344-0c4d3c6dc2b5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c57be9e7-ae3c-456a-bf61-032f24406178 # Product price
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 615057f3-a189-4989-a1b4-e43a69dc9620
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 08dc7f84-01d4-40de-a42a-84ed523b2ea4 # Merk
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 46988a29-d21e-47bf-a789-da4f848e6938
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 14be5644-ad71-4e29-b7a5-2920404d303a # SubMerk
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4738718e-ecc6-4a41-8293-157e580f6421
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 38aa3f4e-a8fb-4d32-8ee5-a130e4f0f46a # Frame materiaal
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d4d948af-b891-4c07-810a-7ca202fec89e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 281d7bd3-703a-44b8-b652-bcc03db58384 # Product image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1957aebb-67e5-48bc-bac1-cd720ffbf956
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d80f07c4-ecdc-4b85-a540-725ca153db16 # Versnellingen
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4f6cdaa6-fd3f-42da-ad28-7de026fdc9d1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e0423218-c241-4353-a057-740f65b203e1 # Maat
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cc892bd4-6d6a-40c2-a69e-d3f92f24fa31
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 25a2e0cf-475e-4acc-a7ad-b5f52c5fa4be # Product colours
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e0151995-96d9-4800-9eba-b06e0f43e70e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3edb0dfd-fbcd-472e-9179-2ffe6e3d8649 # Minpunten
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1c9822f8-a2be-4170-bb9e-3f029f4de1e6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a83a6a9e-1c1d-45e3-8b67-cb6bd839b794 # pluspunten
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9d3c969e-e228-4e7b-a6bd-1b73d52ec192
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bc64d2ad-944f-468d-b8fa-83310b126a4f # Frametype
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0393f181-7656-498b-8f6c-978b5b5da571
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5bb75326-9042-401f-b905-b830d1767d19 # Gewicht
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c1098ae8-631e-45e0-a9ea-60aadf3b630f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 501df415-a2ab-4a2f-aba7-f6492ebc4b2f # Motorpositie
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a1c5a91e-504c-4ff5-a6f1-c645c9605b5c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a90153ee-4da8-4a98-ba62-8c1c4f89db0b # Motor
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e60ac442-2b25-4015-9aa7-28732887120a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\commerce\fieldlayoutelements\VariantsField
+            uid: 41b857ec-f4fe-46a9-898c-572cba728370
+            userCondition: null
+            warning: null
+          -
+            elementCondition: null
+            fieldUid: f4f4f5fc-ac5b-4cb5-ae80-1bdb114914d2 # Accu
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 95beaec3-27ba-4ac6-af6a-2aa5dd038124
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3b1be058-0323-404a-83d2-e012b9bba4fe
+        userCondition: null
+productTitleFormat: ''
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    hasUrls: true
+    template: ''
+    uriFormat: 'bike/{slug}'
+skuFormat: '{product.slug}'
+variantTitleFormat: '{product.title}'

@@ -1,0 +1,19 @@
+columnSuffix: witvgapi
+contentColumnType: text
+fieldGroup: 3d9dfd4a-eed7-47ec-b7f6-485273913bf4 # Bikes
+handle: productDescription
+instructions: null
+name: 'Product description'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: aanbod
+name: Aanbod
+propagationMethod: all
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    enabledByDefault: true
+    hasUrls: true
+    template: aanbod/_entry
+    uriFormat: 'aanbod/{slug}'
+structure:
+  maxLevels: null
+  uid: 345226f1-23f1-4104-831e-48220cecbb25
+type: structure

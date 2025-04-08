@@ -1,0 +1,12 @@
+columnSuffix: irgfvvey
+contentColumnType: string
+fieldGroup: 39f65184-bd4f-4339-8f32-b4e44ed38fc1 # Gebruiker
+handle: email
+instructions: null
+name: Email
+searchable: false
+settings:
+  placeholder: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Email

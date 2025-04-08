@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Bikestore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+        <script src="{{siteUrl}}/vue-assets/js/checkout1.js"></script>
+    <script src="{{siteUrl}}/vue-assets/js/checkoutstap3.js"></script>
+
+    <link rel="stylesheet" href="{{siteUrl}}/vue-assets/css/style.css">
+
+     <link rel="icon" type="image/x-icon" href="{{siteUrl}}/vue-assets/assets/favicon.ico">
+</head>
+
+<body class="bg-primary-white">
+{% include 'upper-navbar.twig' %}
+{% include 'navbar.twig' %}
+{% set cart = craft.commerce.carts.cart %}
+<div class="max-w-screen-xl relative lg:px-30 md:pt-10 md:pb-10 md:px-20 lg:pb-5 lg:pt-5 mx-auto mt-7">
+  <div class="relative lg:px-30 md:pt-10 md:pb-10 md:px-20 lg:pb-5 lg:pt-5">
+    <div class="flex justify-between mb-2">
+    <img src="vue-assets/assets/cart-shopping-checkout.svg" class="h-6 w-6" alt="cart">
+    <img src="vue-assets/assets/account-checkout-dark.svg" class="h-6 w-6" alt="check">
+    <img src="vue-assets/assets/card-checkout-dark.svg" class="h-6 w-6" alt="card">
+    <img src="vue-assets/assets/check-checkout.svg" class="h-6 w-6" alt="checkk">
+</div>
+    <div class="bg-unieke-services-green h-2 relative w-full">
+    <div class="bg-nav-text-green h-2 absolute top-0 left-0" style="width: 100%;"></div>
+  </div>
+</div>
+<div class="max-w-screen-xl relative lg:px-30 md:pt-10 md:pb-10 md:px-20 lg:pb-5 lg:pt-5 mx-auto mt-7">
+    {% include 'stripePaymentForm.twig' %}
+</div>  
+{% include 'footer.twig' %}
+
+</body>

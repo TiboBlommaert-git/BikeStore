@@ -1,0 +1,78 @@
+columnSuffix: xfektpuc
+contentColumnType: string
+fieldGroup: b04bcee3-447a-4b35-b88b-43b89be444a0 # zadel
+handle: geschiktVoor
+instructions: null
+name: 'Geschikt voor'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Elektrische fietsen'
+        -
+          - value
+          - elektrischeFietsen
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Stadsfietsen
+        -
+          - value
+          - stadsfietsen
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Herenfiets
+        -
+          - value
+          - herenfiets
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Bakfietsen
+        -
+          - value
+          - bakfietsen
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Vrouwenfiets
+        -
+          - value
+          - vrouwenfiets
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Transportfiets
+        -
+          - value
+          - transportfiets
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\MultiSelect

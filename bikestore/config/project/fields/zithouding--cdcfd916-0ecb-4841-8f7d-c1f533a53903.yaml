@@ -1,0 +1,68 @@
+columnSuffix: urgpniol
+contentColumnType: string(17)
+fieldGroup: 66129fd5-5056-40e6-b3c0-33b0ceb7cf86 # Accesoires
+handle: zithouding
+instructions: null
+name: Zithouding
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Rechtop zitten'
+        -
+          - value
+          - rechtopZitten
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Halfrechtop zitten'
+        -
+          - value
+          - halfrechtopZitten
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Gebogen zitten'
+        -
+          - value
+          - gebogenZitten
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Diep gebogen zitten'
+        -
+          - value
+          - diepGebogenZitten
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Achterover '
+        -
+          - value
+          - achterover
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

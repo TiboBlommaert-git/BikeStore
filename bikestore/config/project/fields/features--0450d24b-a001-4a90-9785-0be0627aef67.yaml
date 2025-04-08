@@ -1,0 +1,40 @@
+columnSuffix: mjjjymzb
+contentColumnType: text
+fieldGroup: 66129fd5-5056-40e6-b3c0-33b0ceb7cf86 # Accesoires
+handle: features
+instructions: null
+name: features
+searchable: false
+settings:
+  addRowLabel: 'Add a row'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Features
+            -
+              - handle
+              - features
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - ''
+  maxRows: null
+  minRows: null
+  staticRows: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

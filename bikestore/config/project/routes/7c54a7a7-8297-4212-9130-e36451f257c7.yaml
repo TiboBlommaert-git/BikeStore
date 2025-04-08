@@ -1,0 +1,9 @@
+siteUid: null
+sortOrder: 12
+template: bikeDetail
+uriParts:
+  - 'http://localhost/2023-2024-atelier4-bs-groep4/bikestore/web/bikeDetail'
+  -
+    - uid
+    - '[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-4[A-Za-z0-9]{3}-[89abAB][A-Za-z0-9]{3}-[A-Za-z0-9]{12}'
+uriPattern: 'http://localhost/2023-2024-atelier4-bs-groep4/bikestore/web/bikeDetail<uid:[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-4[A-Za-z0-9]{3}-[89abAB][A-Za-z0-9]{3}-[A-Za-z0-9]{12}>'

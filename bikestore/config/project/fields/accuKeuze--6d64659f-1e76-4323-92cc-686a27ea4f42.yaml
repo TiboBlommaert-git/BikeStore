@@ -1,0 +1,35 @@
+columnSuffix: upotzplz
+contentColumnType: string(12)
+fieldGroup: f8eb45e1-fcba-46b0-99b2-3d345ac5a82c # Motor
+handle: accuKeuze
+instructions: null
+name: 'Accu keuze'
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Mogelijk
+        -
+          - value
+          - mogelijk
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Niet mogelijk'
+        -
+          - value
+          - nietMogelijk
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

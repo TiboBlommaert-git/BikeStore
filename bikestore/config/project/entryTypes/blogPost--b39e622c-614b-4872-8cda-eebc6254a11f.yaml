@@ -1,0 +1,95 @@
+fieldLayouts:
+  0cc84f37-0cc9-4d97-9fa9-99d0bec8d2c8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ab8edaae-a401-400d-aea0-cbe8f69e70a2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 189eef2a-d476-4ae0-ac7b-6500a7f33465 # Paragraaf één
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e99f06ce-7cab-49f4-8cb7-5190021315a1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ea99d0bc-0ed9-4ec2-9a01-43eb12bd1e01 # Tussen titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ec7516d6-2aae-4333-a08e-8f71e2cf98a0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9def7fa4-6f5b-4060-830d-efe6ef072a4f # Paragraaf twee
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ada01824-216f-4d9e-acfc-336b4415a9ae
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 34ee2c19-9e44-4711-bf89-e8ab7dea1f7d # Feature Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6715b959-17be-47f9-94d1-7eecf7f47f09
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: fea0dc1f-b09d-41db-8840-288f73d9c20f
+        userCondition: null
+handle: blogPost
+hasTitleField: true
+name: Blog-post
+section: 703b432c-e6f8-4bdd-b38a-bec59105c9eb # Blog-posts
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

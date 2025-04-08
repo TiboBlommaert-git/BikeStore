@@ -1,0 +1,171 @@
+field: e728aeb2-c1a7-41ca-acbc-06c4b39ad3ff # Basic Form Fields
+fieldLayouts:
+  7ce4d0d9-1e2a-43a2-9f35-1a7884607fd5:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 30078cc2-4f3d-48e5-bf8a-0a51f64ea77d # Label
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 06022703-3bd9-4d54-bfbd-0ec154b4f622
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a486be2d-7f95-4b4d-8a99-ae57d903004a # Handle
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dd3833c7-ab97-4b74-beea-356c5b11c88e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: dee960bd-ba83-40fe-a90a-0c2e47286781 # Min Value
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 728527db-8fab-47a4-9c74-5473f1ecc907
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: df5647e9-ab11-4b9c-9421-9421fa77418c # Max Value
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7699998e-4888-4856-bcd0-4c5bf1587d56
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c1d93dae-c409-4341-a77c-f38c08fecc9c # Required
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 191e9aec-2eae-439b-86ca-2857c72d0931
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 841617a7-9571-43a0-b980-7987aaa3f13c
+        userCondition: null
+fields:
+  30078cc2-4f3d-48e5-bf8a-0a51f64ea77d: # Label
+    columnSuffix: sydcdvqv
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: null
+    name: Label
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  a486be2d-7f95-4b4d-8a99-ae57d903004a: # Handle
+    columnSuffix: kabmzmwt
+    contentColumnType: text
+    fieldGroup: null
+    handle: fieldHandle
+    instructions: null
+    name: Handle
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  c1d93dae-c409-4341-a77c-f38c08fecc9c: # Required
+    columnSuffix: rcdfhhty
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: required
+    instructions: 'This field is required?'
+    name: Required
+    searchable: true
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Lightswitch
+  dee960bd-ba83-40fe-a90a-0c2e47286781: # Min Value
+    columnSuffix: bonnbngf
+    contentColumnType: integer(10)
+    fieldGroup: null
+    handle: minValue
+    instructions: null
+    name: 'Min Value'
+    searchable: true
+    settings:
+      decimals: 0
+      defaultValue: null
+      max: null
+      min: null
+      prefix: null
+      previewCurrency: null
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Number
+  df5647e9-ab11-4b9c-9421-9421fa77418c: # Max Value
+    columnSuffix: peqdpybg
+    contentColumnType: integer(10)
+    fieldGroup: null
+    handle: maxValue
+    instructions: null
+    name: 'Max Value'
+    searchable: true
+    settings:
+      decimals: 0
+      defaultValue: null
+      max: null
+      min: null
+      prefix: null
+      previewCurrency: null
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Number
+handle: number
+name: Number
+sortOrder: 5

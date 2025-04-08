@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: navigation
+name: Navigation
+propagationMethod: all
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    enabledByDefault: true
+    hasUrls: true
+    template: navigation/_entry
+    uriFormat: 'navigation/{slug}'
+structure:
+  maxLevels: null
+  uid: 42e8a444-88ec-447b-ac23-72457823be08
+type: structure

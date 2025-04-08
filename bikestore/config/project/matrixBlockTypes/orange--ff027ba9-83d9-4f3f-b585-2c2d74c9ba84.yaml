@@ -1,0 +1,39 @@
+field: 25a2e0cf-475e-4acc-a7ad-b5f52c5fa4be # Product colours
+fieldLayouts:
+  6e0df275-1a43-4831-87a6-e669df36076e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 08bc2287-b27a-4e87-b357-7b9006699dde # Orange
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b85d9014-c571-466d-a590-be297956880d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 75f8fc6c-839c-4255-8dd5-11e9c143707b
+        userCondition: null
+fields:
+  08bc2287-b27a-4e87-b357-7b9006699dde: # Orange
+    columnSuffix: vwglxgsq
+    contentColumnType: char(7)
+    fieldGroup: null
+    handle: orange
+    instructions: null
+    name: Orange
+    searchable: false
+    settings:
+      defaultColor: '#cc5127'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+handle: orange
+name: Orange
+sortOrder: 2

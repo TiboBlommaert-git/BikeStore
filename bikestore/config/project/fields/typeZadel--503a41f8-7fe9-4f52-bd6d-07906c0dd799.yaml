@@ -1,0 +1,101 @@
+columnSuffix: hnjshaph
+contentColumnType: string(18)
+fieldGroup: b04bcee3-447a-4b35-b88b-43b89be444a0 # zadel
+handle: typeZadel
+instructions: null
+name: 'Type zadel'
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Stadfietszadel
+        -
+          - value
+          - stadfietszadel
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Racezadel
+        -
+          - value
+          - racezadel
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Touringzadel
+        -
+          - value
+          - touringzadel
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Gelzadel
+        -
+          - value
+          - gelzadel
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Mountainbikezadel
+        -
+          - value
+          - mountainbikezadel
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Hybride/zachte zadel'
+        -
+          - value
+          - hybrideZachteZadel
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Leerzadel
+        -
+          - value
+          - leerzadel
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Anatomisch/zadels met uitsparing'
+        -
+          - value
+          - anatomischZadel
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

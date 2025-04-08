@@ -1,0 +1,19 @@
+columnSuffix: aotfemmz
+contentColumnType: text
+fieldGroup: f6f95aad-3c88-41be-ba29-b14bac3dad3f # Nav
+handle: label
+instructions: null
+name: label
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

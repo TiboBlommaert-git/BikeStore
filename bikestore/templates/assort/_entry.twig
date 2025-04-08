@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Bikestore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <link rel="stylesheet" href="{{ siteUrl }}vue-assets/css/style.css">
+    {# <script type="module" src="{{siteUrl}}/vue-assets/js/assortimentpage.js"></script> #}
+    <link rel="stylesheet" href="{{siteUrl}}/vue-assets/css/custom.css">
+    <link rel="stylesheet" href="{{siteUrl}}/vue-assets/css/bikeAnimation.css">
+    <script type="module" src="{{siteUrl}}/vue-assets/js/animationBike.js"></script>
+     <link rel="icon" type="image/x-icon" href="{{siteUrl}}/vue-assets/assets/favicon.ico">
+
+</head>
+<body class="bg-primary-white">
+<div id="top"></div>
+
+
+{% include 'upper-navbar.twig' %}
+{% include 'navbar.twig' %}
+
+<div class="max-w-screen-xl mt-10 mb-20 md:mx-auto px-10">
+        <div class="relative inline-block w-38 mr-8 md:mt-6 mt-6">
+           <select id="typeDropdown"
+                class="block appearance-none w-full bg-primary-white border-nav-text-green border-2 text-nav-text-green py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                <option selected disabled>Type fiets</option>
+               {% set submerkCategories = craft.categories.group('submerk').all() %}
+                {% for submerk in submerkCategories %}
+                    <option>{{ submerk.title }}</option>
+                {% endfor %}
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#557260" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </div>
+        </div>
+        <div class="relative inline-block w-38 mr-8 md:mt-6 mt-6">
+             <select id="sizeDropdown"
+                class="block appearance-none w-full bg-primary-white border-nav-text-green border-2 text-nav-text-green py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                <option selected disabled>Maat</option>
+              {% set maatCategories = craft.categories.group('maat').all() %}
+                {% for maat in maatCategories %}
+                    <option>{{ maat.title }}</option>
+                {% endfor %}
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#557260" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </div>
+        </div>
+        <div class="relative inline-block w-38 mr-8 md:mt-6 mt-6">
+            <select id="frameDropdown"
+                class="block appearance-none w-full bg-primary-white border-nav-text-green border-2 text-nav-text-green py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                <option selected disabled>Frametype</option>
+               {% set frametypeCategories = craft.categories.group('frametype').all() %}
+                {% for frametype in frametypeCategories %}
+                    <option>{{ frametype.title }}</option>
+                {% endfor %}
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#557260" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </div>
+        </div>
+        <div class="relative inline-block w-38 mr-8 md:mt-6 mt-6">
+            <select id="brandDropdown"
+                class="block appearance-none w-full bg-primary-white border-nav-text-green border-2 text-nav-text-green py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                <option selected disabled>Merk</option>
+                {% set merkCategories = craft.categories.group('merk').all() %}
+                {% for merk in merkCategories %}
+                    <option>{{ merk.title }}</option>
+                {% endfor %}
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#557260" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </div>
+        </div>
+        <div class="relative inline-block md:mt-6 mt-6">
+            <div class="flex ">
+            {% set bikeEntries = craft.entries.section('bikeEntries').all() %}
+            {% set productPrices = bikeEntries|map(bike => bike.productPrice.getAmount) %}
+
+            {% if productPrices|length > 0 %}
+                {% set minPrice = (productPrices|reduce((min, v) => v < min ? v : min, productPrices[0]) / 100)|round(0, 'floor') %}
+                {% set maxPrice = (productPrices|reduce((max, v) => v > max ? v : max, productPrices[0]) / 100)|round(0, 'floor') %}
+            {% else %}
+                {% set minPrice = 0 %}
+                {% set maxPrice = 0 %}
+            {% endif %}
+
+            <input type="number" min="{{ minPrice }}" max="{{ maxPrice }}" step="10"
+                class="bg-primary-white border-nav-text-green border-2 text-nav-text-green py-1.5 px-4 w-input text-right mr-4" id="priceInput" value="{{ minPrice }}">
+            <input type="range" min="{{ minPrice }}" max="{{ maxPrice }}" step="10" class="w-72 md:w-72 mr-4 ml-4 range-track-custom range-thumb-custom bg-primary-white" id="priceSlider">
+            <input type="number" min="{{ minPrice }}" max="{{ maxPrice }}" step="10"
+                class="bg-primary-white border-nav-text-green border-2 text-nav-text-green py-1.5 px-4 w-input text-right ml-4" id="priceInputMax" value="{{ maxPrice }}">
+        </div>
+    </div>
+    {# Fetch bike entries from the "Bikes" section #}
+ <div class="max-w-screen-xl mx-auto lg:px-0 px-10 mt-10">
+      <div
+        class="grid lg:grid-cols-12 md:grid-cols-12 grid-cols-12-2 gap-4 justify-items-center"
+      >
+{% set type = craft.app.request.getQueryParam('type') %}
+{% set size = craft.app.request.getQueryParam('size') %}
+{% set frame = craft.app.request.getQueryParam('frame') %}
+{% set brand = craft.app.request.getQueryParam('brand') %}
+{% set price = craft.app.request.getQueryParam('price') %}
+
+{% set query = craft.entries.section('bikeEntries') %}
+
+{% if type %}
+    {% set query = query.relatedTo({ targetElement: craft.categories.group('submerk').title(type).one() }) %}
+{% endif %}
+{% if size %}
+    {% set query = query.relatedTo({ targetElement: craft.categories.group('maat').title(size).one() }) %}
+{% endif %}
+{% if frame %}
+    {% set query = query.relatedTo({ targetElement: craft.categories.group('frametype').title(frame).one() }) %}
+{% endif %}
+{% if brand %}
+    {% set query = query.relatedTo({ targetElement: craft.categories.group('merk').title(brand).one() }) %}
+{% endif %}
+{% if price %}
+    {% set priceRange = price|split('-') %}
+    {% if priceRange is iterable and priceRange|length >= 2 %}
+        {% set query = query.price('and, >= ' ~ priceRange[0], '<= ' ~ priceRange[1]) %}
+    {% endif %}
+{% endif %}
+
+{% set entries = query.all() %}
+    {# Check if there are any bike entries #}
+      {% set bikes = craft.products.type(['bike']).all()|slice(0, 9)  %}
+        {% if bikes|length %} {# Loop through each
+        bike entry #} {% for bike in bikes %} {% set value =
+        bike.productPrice|money %} {% set image = bike.productImage.one() %}
+        <div
+          class="md:col-span-6 lg:col-span-4 col-span-8 mx-auto sm:mb-4 mb-4 cursor-pointer"
+        >
+          {% if image %}
+          <a
+            href="{{
+              url(
+                '{{siteUrl}}/bikeDetail',
+                { id: bike.id }
+              )
+            }}"
+          >
+            <img
+              src="{{ image.getUrl() }}"
+              alt="{{ image.title }}"
+              class="lg:w-250p md:w-250p sm:w-100p w-100p h-auto"
+            />
+          </a>
+          {% else %}
+          <p>No image available for this entry.</p>
+          {% endif %}
+          <h2 class="text-bike-color-dark-grey mt-3 font-semibold text-h2">
+            {{ bike.title }}
+          </h2>
+          <h4 class="text-bike-color-dark-grey mb-3 mt-min5px">
+            {% set merkCategory = bike.merk.one() %} {% if merkCategory %}
+            {{ merkCategory.title }}
+            {% endif %}
+          </h4>
+          <div class="flex mb-2">
+            {% if bike.productColours|length %} {%
+            for row in bike.productColours %} {% if row.hexcode is not empty %}
+            <span
+              class="block h-2 w-5 mr-1"
+              style="background-color: {{ row.hexcode }}"
+            ></span>
+            {% endif %} {% endfor %} {% else %}
+            <p>No colors available for this bike.</p>
+            {% endif %}
+          </div>
+          <h3 class="font-bold">{{ value }}</h3>
+        </div>
+        {% endfor %} {% else %}
+        <p>No bike entries found.</p>
+        {% endif %}
+      </div>
+    </div>
+</div>
+ <div class="mt-20 lg:mt-40 w-3/4 relative observe-me">
+    <img src="vue-assets/assets/bike.svg" alt="bike" class="absolute bottom-0 c-bike transform flip-image" />
+    <hr class="h-200px my-2 bg-nav-text-green w-full border-1 border-nav-text-green c-line" ref="observeMe" />
+  </div>
+  <div class="max-w-screen-xl mx-auto mt-20 lg:mt-40 mb-20 lg:mb-40 md:mx-auto px-10">
+    <div class="grid grid-cols-12 gap-10">
+      <div class="col-span-12 lg:col-span-8 md:mb-5 md:mx-auto mr-4">
+        <video class="w-full h-full object-cover" autoplay loop muted>
+          <source src="vue-assets/assets/preview.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="col-span-12 lg:col-span-4 my-auto md:mx-auto">
+        <h2 class="font-bold text-4xl text-nav-text-green mb-1">Moustache</h2>
+        <h3 class="text-2xl mb-2">Musti</h3>
+        <p class="mb-3">De Moustache elektrische fiets combineert stijl, comfort en kracht voor een duurzame en plezierige rijervaring.</p>
+        <p class="mb-6 text-4xl text-nav-text-green">€2399</p>
+        <button class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-inter border border-white hover:border-nav-text-green transition-colors duration-400 delay-50 hover:bg-primary-white hover:text-nav-text-green">Lees meer</button>
+      </div>
+    </div>
+  </div>
+  <div class="bg-nav-text-green pt-5 pb-5 mb-20 lg:mb-60 relative z-index-1">
+    <div class="max-w-screen-xl lg:text-center mt-20 mb-20 mx-auto px-10 my-auto">
+      <h2 class="text-4xl text-primary-white mb-4">Een elektrische fiets van Bikestore, dat is vooral heel veel service</h2>
+      <p class="text-primary-white">Ook na je aankoop kan je rekenen op de service die je geniet zoals bij een lokale fietsenwinkel,en zelfs meer. Met onze mobiele servicewagens bieden we all-inserviceaan huis voor levering, onderhoud, herstelling en pechverhelping. Jij hoeft dus alleen maar zorgeloos te genieten en te trappen. Want ja, ook met een elektrische fiets moet je blijven trappen.</p>
+    </div>
+    <div class="absolute left-0 ml-4 lg:mt-5 lg:mb-4 w-20 h-30 lg:w-40 lg:h-60 z-index-0 hidden lg:block">
+      <video class="w-full h-full object-cover" autoplay loop muted>
+        <source src="vue-assets/assets/prise.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+  <div class="bg-unieke-services mb-plus20rem mt-plus20rem">
+    <div class="grid grid-cols-12 gap-4">
+      <div class="col-span-12 lg:col-span-8 my-auto py-10 lg:py-6 lg:px-0 px-10">
+        <div class="max-w-screen-xl lg:px-30 md:pt-10 md:pb-10 md:px-20 lg:pb-5 lg:pt-5">
+          <h2 class="text-4xl text-nav-text-green font-bold mb-4">Een e-bike uitproberen?</h2>
+          <p class="text-nav-text-green font-semibold my-6">Met een gratis proefrit aan huis of op locatie naar keuze laten we je het elektrische fietsen echt ervaren. Tijdens ons bezoek begeleiden we jou bij de keuze van de fiets die perfect bij jou past. We leggen je alles heel goed uit zodat jouw e-bike snel jouw beste vriend wordt.</p>
+          <button class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-sofia border border-white hover:border-nav-text-green transition-colors duration-400 delay-50 hover:bg-primary-white hover:text-nav-text-green mt-5">Bezoek ons aanbod</button>
+        </div>
+      </div>
+
+      <img src="vue-assets/assets/uitproberen.svg" alt="" class="object-cover col-span-4 lg:col-span-4 md:my-auto hidden lg:block h-full" />
+    </div>
+  </div>
+    <div class="max-w-screen-xl mx-auto mt-20 mb-20 lg:mb-40 md:mx-auto px-10">
+    <div class="grid grid-cols-12 gap-4">
+      <div class="col-span-12 lg:col-span-8 lg:order-2 lg:col-start-5 md:mb-5 md:mx-auto">
+        <img src="vue-assets/assets/previewimage.png" class="w-highlightImg h-auto flip-image align-top" />
+      </div>
+      <div class="col-span-12 lg:col-span-4 lg:order-1 md:mx-auto flex flex-col justify-start mt-20">
+        <h2 class="font-bold text-4xl text-nav-text-green mb-1">Moustache</h2>
+        <h3 class="text-2xl mb-2">Musti</h3>
+        <p class="mb-3">De Moustache elektrische fiets combineert stijl, comfort en kracht voor een duurzame en plezierige rijervaring.</p>
+        <p class="mb-6 text-4xl text-nav-text-green">€2399</p>
+        <button class="max-w-max bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-inter border border-white hover:border-nav-text-green transition-colors duration-400 delay-50 hover:bg-primary-white hover:text-nav-text-green">Lees meer</button>
+      </div>
+    </div>
+  </div>
+{% include 'footer.twig' %}
+        <script type="module" src="{{siteUrl}}/vue-assets/js/filtersAssortiment.js"></script>
+<a href="#top" class="fixed right-4 bottom-4 text-white bg-fixed-nav-green  text-xs p-2 rounded-full px-4 shadow-lg z-50"> Terug naar boven </a>
+
+
+</body>
+</html>
+
+<style>
+.flip-image {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+</style>

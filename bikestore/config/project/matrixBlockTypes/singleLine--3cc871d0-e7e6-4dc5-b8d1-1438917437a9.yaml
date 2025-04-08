@@ -1,0 +1,137 @@
+field: e728aeb2-c1a7-41ca-acbc-06c4b39ad3ff # Basic Form Fields
+fieldLayouts:
+  b69ed5e3-4af1-46d0-b682-14deea167017:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: aa589abb-8bf5-4e09-8162-62575cc246b9 # Label
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 26005584-7d51-4c09-99c3-5722dfe48dc3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0b159388-3016-4bdf-ac69-70f2bdaa90b7 # Handle
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 89b04e10-2c32-4d9f-9100-8a01e669ef4a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 352999a0-03fb-4132-a574-02b90fdb2eab # Placeholder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8c21352a-ab8c-48f9-bb86-282825c65f90
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6e58a0c6-ffc8-4caa-ac7c-1117a755280d # Required
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fd73784b-21a4-4948-aed3-89375b9acf4e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 56178026-329a-4919-ba1d-a23914b3f11c
+        userCondition: null
+fields:
+  0b159388-3016-4bdf-ac69-70f2bdaa90b7: # Handle
+    columnSuffix: mnsgcwnl
+    contentColumnType: text
+    fieldGroup: null
+    handle: fieldHandle
+    instructions: null
+    name: Handle
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  6e58a0c6-ffc8-4caa-ac7c-1117a755280d: # Required
+    columnSuffix: nmuobunq
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: required
+    instructions: 'This field is required?'
+    name: Required
+    searchable: true
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Lightswitch
+  352999a0-03fb-4132-a574-02b90fdb2eab: # Placeholder
+    columnSuffix: fujtholy
+    contentColumnType: text
+    fieldGroup: null
+    handle: placeholder
+    instructions: null
+    name: Placeholder
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  aa589abb-8bf5-4e09-8162-62575cc246b9: # Label
+    columnSuffix: lqwxrvyn
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: null
+    name: Label
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: singleLine
+name: 'Single Line'
+sortOrder: 1

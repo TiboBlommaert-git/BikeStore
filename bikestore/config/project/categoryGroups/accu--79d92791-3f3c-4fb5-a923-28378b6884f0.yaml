@@ -1,0 +1,47 @@
+defaultPlacement: end
+fieldLayouts:
+  d910ca73-41e3-4896-acaa-2b838b8f632d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 312469b7-8c3b-4c48-8994-dc8c8b7e4217
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ed5742d3-e21f-4246-96af-15d6aa948f1b
+        userCondition: null
+handle: accu
+name: Accu
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    hasUrls: true
+    template: null
+    uriFormat: 'accu/{slug}'
+structure:
+  maxLevels: null
+  uid: b6581017-6cd1-44ce-8977-8fdcc91c7033

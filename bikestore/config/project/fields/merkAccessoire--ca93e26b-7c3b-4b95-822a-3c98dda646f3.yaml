@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 66129fd5-5056-40e6-b3c0-33b0ceb7cf86 # Accesoires
+handle: merkAccessoire
+instructions: null
+name: 'Merk accessoire'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: true
+  source: 'group:da40bdea-0bf4-4cda-afc4-8a2122b1b109' # Merk accessoire
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

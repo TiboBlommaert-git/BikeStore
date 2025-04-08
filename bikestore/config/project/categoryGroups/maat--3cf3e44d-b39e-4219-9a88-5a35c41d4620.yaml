@@ -1,0 +1,47 @@
+defaultPlacement: end
+fieldLayouts:
+  71179888-b442-4532-a9b4-1a33b9733ab0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 2d86a7fd-bc82-4bf4-b50e-068b6bfa98c5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1a4e8d25-5aa7-46a5-b476-2f79572b5f94
+        userCondition: null
+handle: maat
+name: Maat
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    hasUrls: true
+    template: null
+    uriFormat: 'maat/{slug}'
+structure:
+  maxLevels: null
+  uid: 01f6d56c-0bca-4d6e-87fc-2803526b914e

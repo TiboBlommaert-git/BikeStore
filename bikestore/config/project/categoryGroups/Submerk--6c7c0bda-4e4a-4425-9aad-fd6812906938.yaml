@@ -1,0 +1,59 @@
+defaultPlacement: end
+fieldLayouts:
+  6849a6d5-4193-443f-96a8-beb01744eba9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: ffa136bf-d084-422f-97c2-8bb9ab3069e8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b5b91cb7-334f-431f-af73-253e820af38c # url
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bff2a6d2-3174-4386-b955-751da328f9e6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d6ffebc8-6a62-4517-ae8c-e358f15e46d2
+        userCondition: null
+handle: Submerk
+name: Submerk
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    hasUrls: true
+    template: null
+    uriFormat: 'submerken/{slug}'
+structure:
+  maxLevels: null
+  uid: e5ecca48-b693-4223-bf36-d66eed389eee

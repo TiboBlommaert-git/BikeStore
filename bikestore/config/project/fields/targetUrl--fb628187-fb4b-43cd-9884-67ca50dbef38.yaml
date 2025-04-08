@@ -1,0 +1,14 @@
+columnSuffix: ixzgtico
+contentColumnType: string(255)
+fieldGroup: f6f95aad-3c88-41be-ba29-b14bac3dad3f # Nav
+handle: targetUrl
+instructions: null
+name: URL
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

@@ -1,0 +1,47 @@
+defaultPlacement: end
+fieldLayouts:
+  a0b68504-bfe0-4fcc-bb25-243d26781be3:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 3b90f1a9-49cb-4dc2-b368-470c3825ac9f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: f1a3adbf-fab2-4182-ad32-db13c40a87fa
+        userCondition: null
+handle: merkAccessoire
+name: 'Merk accessoire'
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    hasUrls: true
+    template: null
+    uriFormat: 'merk-accessoire/{slug}'
+structure:
+  maxLevels: null
+  uid: 3996feb4-7ccb-4c5d-9454-ace42798a493

@@ -1,0 +1,39 @@
+field: 25a2e0cf-475e-4acc-a7ad-b5f52c5fa4be # Product colours
+fieldLayouts:
+  90162ba6-5827-433d-ad56-cca99c18f62b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f9eb48e2-e2b6-48a8-833d-406d082e959d # Light grey
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9e06e58f-e5bd-409b-bed6-4ba196ff6592
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c227cb47-77dc-4ef9-b803-4b45046cafd1
+        userCondition: null
+fields:
+  f9eb48e2-e2b6-48a8-833d-406d082e959d: # Light grey
+    columnSuffix: gggjsdzt
+    contentColumnType: char(7)
+    fieldGroup: null
+    handle: lightGrey
+    instructions: null
+    name: 'Light grey'
+    searchable: false
+    settings:
+      defaultColor: '#d4d7d1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+handle: lightGrey
+name: 'Light grey'
+sortOrder: 6

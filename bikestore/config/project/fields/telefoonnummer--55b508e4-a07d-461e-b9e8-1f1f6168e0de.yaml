@@ -1,0 +1,20 @@
+columnSuffix: udynelva
+contentColumnType: integer(10)
+fieldGroup: 39f65184-bd4f-4339-8f32-b4e44ed38fc1 # Gebruiker
+handle: telefoonnummer
+instructions: null
+name: Telefoonnummer
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: null
+  max: null
+  min: 0
+  prefix: +
+  previewCurrency: null
+  previewFormat: decimal
+  size: 15
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

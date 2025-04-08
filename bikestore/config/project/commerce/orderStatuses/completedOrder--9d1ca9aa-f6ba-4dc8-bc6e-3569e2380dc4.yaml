@@ -1,0 +1,6 @@
+color: green
+default: true
+description: 'The order has been cpmmeted'
+handle: completedOrder
+name: 'Completed order'
+sortOrder: 99

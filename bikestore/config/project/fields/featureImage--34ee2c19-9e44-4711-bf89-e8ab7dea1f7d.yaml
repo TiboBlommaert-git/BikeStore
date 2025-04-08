@@ -1,0 +1,38 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 56f3d70b-fb33-435f-bbb9-b9dc8765d17a # Blog
+handle: featureImage
+instructions: null
+name: 'Feature Image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:66dc5d38-bc2b-4197-8432-32cf8d6d2666' # assets
+  defaultUploadLocationSubpath: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: 1
+  previewMode: full
+  restrictFiles: true
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:66dc5d38-bc2b-4197-8432-32cf8d6d2666' # assets
+  restrictedLocationSubpath: null
+  selectionLabel: 'Add feature image'
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources:
+    - 'volume:66dc5d38-bc2b-4197-8432-32cf8d6d2666' # assets
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

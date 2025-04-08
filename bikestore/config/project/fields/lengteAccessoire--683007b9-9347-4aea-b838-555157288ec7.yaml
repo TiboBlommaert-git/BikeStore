@@ -1,0 +1,20 @@
+columnSuffix: pybwntlg
+contentColumnType: integer(10)
+fieldGroup: b04bcee3-447a-4b35-b88b-43b89be444a0 # zadel
+handle: lengteAccessoire
+instructions: null
+name: 'Lengte accessoire'
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: null
+  max: null
+  min: 0
+  prefix: null
+  previewCurrency: null
+  previewFormat: decimal
+  size: null
+  suffix: cm
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

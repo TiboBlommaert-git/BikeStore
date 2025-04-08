@@ -1,0 +1,14 @@
+columnSuffix: jolrgalo
+contentColumnType: string(255)
+fieldGroup: 2119eb15-a946-4ca7-9094-4c1c3a2ffc49 # TopNav
+handle: targetUrlTop
+instructions: null
+name: Url
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

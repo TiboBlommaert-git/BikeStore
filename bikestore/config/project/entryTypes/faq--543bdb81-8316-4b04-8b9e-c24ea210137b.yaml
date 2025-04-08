@@ -1,0 +1,71 @@
+fieldLayouts:
+  1e1e2fdb-4d37-4247-b9f2-c79402444a74:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 80c10f5f-b393-4dbe-b1c6-bd91a5e90f7e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e8a3f024-3c28-4e0a-85de-585cc39e19c9 # Question
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3fe10064-da42-41a8-a586-d0f5eea5ae5f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 406d61cb-ca38-453a-a636-5b4904aff800 # Awnser
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d831758d-76d9-4e65-a675-c21945cd5872
+            userCondition: null
+            warning: null
+            width: 100
+        name: Faq
+        uid: c76dd855-c645-4395-bc68-6b60a9ef2c75
+        userCondition: null
+handle: faq
+hasTitleField: true
+name: faq
+section: d80e4e44-5480-4aaa-abab-774b2f2fcd8f # FAQ
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

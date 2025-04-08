@@ -1,0 +1,35 @@
+columnSuffix: endemgvw
+contentColumnType: string(20)
+fieldGroup: f8eb45e1-fcba-46b0-99b2-3d345ac5a82c # Motor
+handle: uitneembareMotor
+instructions: null
+name: 'Uitneembare motor'
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Uitneembare motor'
+        -
+          - value
+          - uitneembareMotor
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Niet uitneembare motor'
+        -
+          - value
+          - nietUitneembareMotor
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

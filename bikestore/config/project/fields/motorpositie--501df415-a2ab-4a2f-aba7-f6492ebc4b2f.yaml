@@ -1,0 +1,46 @@
+columnSuffix: dmfsydts
+contentColumnType: string(15)
+fieldGroup: 3d9dfd4a-eed7-47ec-b7f6-485273913bf4 # Bikes
+handle: motorpositie
+instructions: null
+name: Motorpositie
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Voorwielmotor
+        -
+          - value
+          - voorwielmotor
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Achterwielmotor
+        -
+          - value
+          - achterwielmotor
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Middenmotor
+        -
+          - value
+          - middenmotor
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

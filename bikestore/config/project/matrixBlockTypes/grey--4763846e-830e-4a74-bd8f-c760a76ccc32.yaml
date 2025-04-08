@@ -1,0 +1,39 @@
+field: 25a2e0cf-475e-4acc-a7ad-b5f52c5fa4be # Product colours
+fieldLayouts:
+  ee38c50e-b8cc-4592-af04-b34a97a366c4:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 08e2fa34-b35a-4113-af7d-3cb13f2df455 # Grey
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c01b12b0-bee3-4ce6-9fe6-51f75e977aa4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 90ff1fae-7cd3-4c04-b8fb-c9da2a2f251d
+        userCondition: null
+fields:
+  08e2fa34-b35a-4113-af7d-3cb13f2df455: # Grey
+    columnSuffix: vmwxmgss
+    contentColumnType: char(7)
+    fieldGroup: null
+    handle: grey
+    instructions: null
+    name: Grey
+    searchable: false
+    settings:
+      defaultColor: '#656263'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+handle: grey
+name: Grey
+sortOrder: 7

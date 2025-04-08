@@ -1,0 +1,19 @@
+columnSuffix: ggwrsger
+contentColumnType: text
+fieldGroup: 66129fd5-5056-40e6-b3c0-33b0ceb7cf86 # Accesoires
+handle: description
+instructions: null
+name: Description
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

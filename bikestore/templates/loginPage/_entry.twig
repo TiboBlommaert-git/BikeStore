@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Bikestore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <script src="{{siteUrl}}/vue-assets/js/checkout1.js"></script>
+    <link rel="stylesheet" href="{{siteUrl}}/vue-assets/css/style.css">
+
+     <link rel="icon" type="image/x-icon" href="{{siteUrl}}/vue-assets/assets/favicon.ico">
+</head>
+
+<body class="bg-primary-white"><div id="top"></div>
+
+
+{% include 'upper-navbar.twig' %}
+
+{% include 'navbar.twig' %}
+
+   <div class="flex justify-center items-center bg-primary-white h-screen">
+    <div class="max-w-screen-xl mx-auto">
+
+        <div class="flex justify-center mb-16">
+          <img src="./img/logo.svg" alt="">
+        </div>
+        <div class="flex flex-col justify-center flex-wrap content-center">
+        <div class="w-3/3 md:1/3 flex flex-wrap justify-center">
+          <form class="font-inter">
+
+            <input
+              class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10"
+              placeholder="Gebruikersnaam of email"
+            />
+            <input
+              class="bg-transparent border-2 border-nav-text-green text-nav-text-green placeholder-nav-text-green rounded-1 pb-1 pl-2 footer-form w-full h-10 mt-4"
+              placeholder="Wachtwoord"
+            />
+          </form>
+        </div>
+          <div class="flex items-end w-3/3 justify-around mb-12">
+            <div class="mt-4 flex">
+              <input
+                  type="checkbox"
+                  id="agree1"
+                  name="agree1"
+                  class="bg-transparent border-2 border-nav-text-green rounded-1 pb-1 footer-form w-6 h-6 mr-2"
+              />
+              <label for="agree1">hou me ingelogd</label>
+          </div>
+          <p>Wachtwoord vergeten?</p>
+
+          </div>
+
+        </div>
+
+          <div class="max-w-screen-xl mx-auto mb-32">
+
+            <div class="flex justify-center flex-wrap">
+              <button
+              class="flex items-center bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-sofia transition-colors duration-400 delay-50 hover:bg-unieke-services-green hover:text-primary-white"
+                >
+                Akkoord
+              </button>
+            </div>
+      
+          </div>
+
+    </div>
+
+  </div>
+<a href="#top" class="fixed right-4 bottom-4 text-white text-xs  bg-fixed-nav-green p-2 rounded-full px-4 shadow-lg z-50"> Terug naar boven </a>
+
+
+</body>

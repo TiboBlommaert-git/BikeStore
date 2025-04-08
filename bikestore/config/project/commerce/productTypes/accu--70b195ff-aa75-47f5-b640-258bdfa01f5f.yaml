@@ -1,0 +1,61 @@
+descriptionFormat: '{product.title} - {title}'
+handle: accu
+hasDimensions: false
+hasProductTitleField: true
+hasVariantTitleField: false
+hasVariants: false
+name: Accu
+productFieldLayouts:
+  56f13973-6b6c-41c7-82e2-9e8d93887c9b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\commerce\fieldlayoutelements\ProductTitleField
+            uid: 1a25ca6e-d66f-493b-bc6e-87d9785f7056
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\commerce\fieldlayoutelements\VariantsField
+            uid: a75179fa-e6fc-4b8c-afd9-f6d4fc8044ad
+            userCondition: null
+            warning: null
+        name: Content
+        uid: be7f6be0-96c8-4b4f-abae-666255749dfe
+        userCondition: null
+productTitleFormat: ''
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    hasUrls: true
+    template: ''
+    uriFormat: 'accu/{slug}'
+skuFormat: '{product.slug}'
+variantTitleFormat: '{product.title}'

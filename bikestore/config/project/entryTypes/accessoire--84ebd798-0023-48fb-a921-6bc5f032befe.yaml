@@ -1,0 +1,83 @@
+fieldLayouts:
+  8c7529f7-c544-408c-99f9-33b6b30bbae1:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: d84f5317-0c88-4ec0-86f9-6ab54299c23f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 983727ed-8ebc-4975-888c-dd5d217a186c # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 64aa64b2-7551-4805-b0d5-edfa24a9fd3e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6abc7c81-1685-4b09-99d5-f91a87f7f506 # Price
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1d4110df-dab5-4c2e-9710-99aa5dbea6d9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cc140371-7919-4758-91a4-6bfb02e7da50 # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eb61096c-eb9c-45e0-8cfd-72209463c82a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: da68e379-d034-4453-a15c-d7dcad010b4a
+        userCondition: null
+handle: accessoire
+hasTitleField: true
+name: Accessoire
+section: beff6790-4195-4f75-b1f9-d4c75d4a06ef
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 2
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    {% set entry = craft.entries.section('overBikestore').slug('over-bikestore').one() %}
+    <title>{{ entry.title }}</title>
+    <meta name="description" content="{{ entry.description }}">
+    <meta property="og:title" content="{{ entry.title }}">
+    <meta property="og:description" content="{{ entry.description }}">
+    <meta property="og:url" content="{{ entry.urlAanbod }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <script type="module" src="{{siteUrl}}/vue-assets/js/homepage.js"></script>
+    <link rel="stylesheet" href="{{siteUrl}}/vue-assets/css/style.css">
+     <link rel="icon" type="image/x-icon" href="{{siteUrl}}/vue-assets/assets/favicon.ico">
+</head>
+<body class="bg-primary-white">
+<div id="top"></div>
+
+
+{% include 'upper-navbar.twig' %}
+
+{% include 'navbar-hero.twig' %}
+
+<div class="lg:h-824 sm:h-476 flex lg:relative bg-nav-text-green lg:bg-white z-0">
+    <div class="hidden lg:block lg:w-2/5 bg-primary-white justify-center items-center">
+    <img src="vue-assets/assets/oldbike.svg" alt="old bike" class="mr-12 absolute top-1/2 w-1/2 sm:w-1/2 md:w-1/3 transform -translate-x-1/4 -translate-y-1/2 ml-10">
+</div>
+
+    <div class="w-full lg:w-3/5 bg-nav-text-green flex justify-center">
+      <div class="flex justify-end items-center md:h-full">
+        <div class="xl:w-4/5 w-full flex flex-col text-left text-primary-white sm:px-16 md:px-20 px-6 my-10 sm:my-0 bg-nav-text-green">
+          <div class="font-black text-5xl md:text-7xl font-inter mb-8">
+            <p>Bikestore
+ons unieke 
+verhaal… </p>
+          </div>
+          <div class="font-inter">
+            <p class="mb-6">
+Ontdek de perfecte fiets online met persoonlijke service! Blader door ons diverse aanbod terwijl ons team klaarstaat om te adviseren. Of je nu een stadsfiets, racefiets of mountainbike zoekt, wij helpen je graag. Ervaar het gemak van online winkelen met lokale service bij ons!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex sm:flex-row-reverse flex-col min-h-screen">
+    <div class="xl:w-1/2 w-full flex flex-col justify-center text-left sm:px-16 md:px-20 px-6 my-10">
+      <div class="font-semibold text-3xl font-sofia mb-4">
+        <p>Tim <span class="text-nav-text-green">vertelt</span>...</p>
+      </div>
+      <div class="font-inter">
+        <p class="mb-4">“Ongetwijfeld één van de mooiste momenten uit mijn leven, het moment waarop ik mijn oudste zoontje loslaat …  
+          Met zijn fietsje probeert hij op twee wielen gracieus en vastbesloten zijn evenwicht te behouden. Een nieuwe wereld gaat voor hem open, onze straat is vanaf nu zijn speelterrein.<br>
+          Dit gevoel van trots en voldoening is exact wat we willen creëren met Bikestore. Mensen aanzetten om zorgeloos te genieten op de fiets.
+          De elektrische fiets zorgt ervoor dat je op een comfortabele manier meer kan fietsen.
+          <br><br>
+          Maar net zoals bij mijn zoontje ben ik ervan overtuigd dat een klein duwtje in de rug extra zelfzekerheid zal geven. Dat krijg jij bij Bikestore.”
+          </p>
+        <p class="font-bold text-nav-text-green">Tim — Zaakvoerder</p>
+      </div>
+    </div>
+    <div class="xl:w-1/2 w-full sm:block">
+      <img class="w-full h-full object-cover" src="vue-assets/assets/timachtergrond.svg" alt="Bikepicture" />
+    </div>
+  </div>
+<div class="flex sm:flex-row flex-col min-h-screen mt-14 xl:mt-0">
+    <div class="xl:w-1/2 w-full flex flex-col justify-center text-left sm:px-20 px-6 my-10 sm:my-0">
+      <div class="font-semibold text-3xl font-sofia mb-4">
+        <p >
+          Een elektrische fiets <span class="text-nav-text-green">kopen? </span>
+Hoe pak je dit aan?</p>
+        </p>
+      </div>
+
+      <div class="font-inter">
+        <p class="mb-4"><span class="font-bold">Ofwel schuim je het internet af.</span><br>
+Waarschijnlijk loop je snel verloren in het enorme aanbod en ben je bang om een miskoop te doen.
+Een elektrische fiets is een hele investering. Wat als die fiets niet goed is?
+</p>
+        <p class="mb-4"><span class="font-bold">Ofwel passeer je bij plaatselijke fietsenverkoper.</span><br>
+Maar heeft hij tijd om jou de verschillende typefietsen te tonen en je uitgebreid te adviseren?  Zal hij samen met jou een proefrit maken?
+</p>
+        <p class="mb-4"><span class="font-bold">Bij Bikestore willen we je van deze complexe zoektocht verlossen.</span><br>
+We combineren de voordelen van online kopen met de service en het advies dat je geniet bij je lokale fietsenwinkel. We selecteerden voor jou de beste fietsonderdelen en accessoires op de markt en stelden de perfecte fietsen samen.
+</p>
+<p class="mb-4 font-bold text-lg">Jouw elektrische fiets <span class="text-nav-text-green">aan huis getest</span> en <span class="text-nav-text-green">geleverd</span>.</p>
+        
+      </div>
+    </div>
+    <div class="xl:w-1/2 w-full sm:block">
+      <img class="w-full h-full object-cover" src="vue-assets/assets/laptopcoffee.svg" alt="laptopcoffee" />
+    </div>
+  </div>
+   
+<div class="bg-nav-text-green flex font-sofia items-center  w-full h-100 lg:h-64 ">
+<p class="text-primary-white font-bold text-xl mt-10 mb-10 ml-10 md:ml-20 mr-20 md:mr-40">"Op weg naar de toekomst met elke pedaalslag. In onze fietsenwinkel verkopen we niet alleen elektrische fietsen we geven kracht aan een groenere toekomst, één rit per keer."</p>
+</div>
+
+<div class="flex sm:flex-row-reverse flex-col min-h-screen">
+    <div class="xl:w-1/2 w-full flex flex-col justify-center text-left sm:px-16 md:px-20 px-6 my-10 sm:my-0">
+      <div class="font-semibold text-3xl font-sofia  mb-4">
+        <p>Comfort en <span class="text-nav-text-green">vertrouwen</span></p>
+      </div>
+      <div class="font-inter">
+        <p class="mb-4">Bikestore wil het comfort van de e-bike dichter bij de gebruiker brengen.<br>
+Een team van professionals staat daarom voor je klaar. Ze komen vrijblijvend langs voor een gratis proefrit aan huis of op locatie naar keuze en begeleiden je zo om de fiets te kiezen die perfect bij jou past. Na ons bezoek is je e-bike jouw nieuwe vriend.
+</p>
+      </div>
+    </div>
+    <div class="xl:w-1/2 w-full sm:block">
+      <img class="w-full h-full object-cover" src="vue-assets/assets/fietsbergen.svg" alt="Bikepicture" />
+    </div>
+  </div>
+<div class="flex sm:flex-row flex-col min-h-screen mt-14 xl:mt-0">
+    <div class="xl:w-1/2 w-full flex flex-col justify-center text-left sm:px-20 px-6 my-10 sm:my-0">
+      <div class="font-semibold text-3xl font-sofia  mb-4">
+        <p>
+          Wees <span class="text-nav-text-green">gerust</span></p>
+        </p>
+      </div>
+
+      <div class="font-inter">
+       <p class="mb-2">Bij Bikestore laten we je niet aan je lot over. We rijden graag met je mee.<br>
+Ook maken we uitgebreid tijd om de fietsen te vergelijken.
+Niet enkel de technische aspecten vinden we belangrijk.
+Ook het advies rond het gebruik en verkeersveiligheid vergeten wij niet.
+Ga je over tot de aankoop, dan bieden we een all-in servicepakket voor levering, onderhoud, herstelling en pechverhelping.
+</p>
+<p class="flex items-center text-nav-text-green mb-2">
+  Meer hierover in onze brochure
+  <img src="vue-assets/assets/pijltjerechts.svg" alt="pijltje" class="ml-1 w-4 h-4">
+</p>
+
+<p class="font-medium text-lg mb-3">Overtuigd?<br>
+Waar wacht je nog op?</p>
+<a href="{{siteUrl}}/verhaal" class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-inter border border-nav-text-green transition-colors duration-400 delay-50 hover:bg-primary-white hover:text-nav-text-green">Bekijk ons assortiment</a>
+    </div>
+    </div>
+    <div class="xl:w-1/2 w-full sm:block">
+      <img class="w-full h-full object-cover" src="vue-assets/assets/cafe.svg" alt="laptopcoffee" />
+    </div>
+  </div>
+</body><a href="#top" class="fixed right-4 text-xs  bottom-4 text-white bg-fixed-nav-green p-2 rounded-full px-4 shadow-lg z-50"> Terug naar boven </a>
+
+{% include 'footer.twig' %}
+</html>   

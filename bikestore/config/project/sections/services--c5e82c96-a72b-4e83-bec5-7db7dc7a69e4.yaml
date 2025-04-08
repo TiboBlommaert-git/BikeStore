@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: services
+name: Services
+propagationMethod: all
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    enabledByDefault: true
+    hasUrls: true
+    template: services/_entry
+    uriFormat: 'services/{slug}'
+structure:
+  maxLevels: null
+  uid: a28f0de3-9701-40de-80b2-a3bf54978ef6
+type: structure

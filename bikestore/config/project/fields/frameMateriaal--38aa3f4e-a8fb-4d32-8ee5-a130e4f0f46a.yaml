@@ -1,0 +1,68 @@
+columnSuffix: propculv
+contentColumnType: string(19)
+fieldGroup: 3d9dfd4a-eed7-47ec-b7f6-485273913bf4 # Bikes
+handle: frameMateriaal
+instructions: null
+name: 'Frame materiaal'
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Staal
+        -
+          - value
+          - staal
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Aluminium
+        -
+          - value
+          - aluminium
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Carbonvezel
+        -
+          - value
+          - carbonvezel
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Titanium
+        -
+          - value
+          - titanium
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Composietmaterialen
+        -
+          - value
+          - composietmaterialen
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

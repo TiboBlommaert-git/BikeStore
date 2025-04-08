@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: accessoires
+name: Accessoires
+propagationMethod: all
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    enabledByDefault: true
+    hasUrls: true
+    template: accessoires/_entry
+    uriFormat: 'accessoires/{slug}'
+type: channel

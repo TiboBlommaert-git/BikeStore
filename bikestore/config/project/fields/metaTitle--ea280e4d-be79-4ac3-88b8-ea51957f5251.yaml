@@ -1,0 +1,19 @@
+columnSuffix: vzpdoncb
+contentColumnType: text
+fieldGroup: 8cb2d317-375b-4c4f-83b8-bc71a7e28fd5 # Aanbod
+handle: metaTitle
+instructions: null
+name: 'meta title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

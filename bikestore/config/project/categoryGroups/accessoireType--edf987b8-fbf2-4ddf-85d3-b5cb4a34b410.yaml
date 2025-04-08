@@ -1,0 +1,47 @@
+defaultPlacement: end
+fieldLayouts:
+  a299d265-21c2-467c-b64f-4af6c24358a6:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: dc0f1dec-0a93-40ac-85d0-7afeaac6a385
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: fca573c4-35a8-4c5e-8398-41b29f373265
+        userCondition: null
+handle: accessoireType
+name: 'Accessoire type'
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    hasUrls: true
+    template: null
+    uriFormat: 'accessoire-type/{slug}'
+structure:
+  maxLevels: null
+  uid: c2f4c4a2-7ae6-4c76-b1ee-82cb9ac9bc98

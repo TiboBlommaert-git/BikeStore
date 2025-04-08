@@ -1,0 +1,24 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: f13794cb-a4f5-4389-aa46-fda4d23333af # Variant
+handle: variants
+instructions: null
+name: Variants
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: false
+  sources:
+    - 'section:f416a03e-f8ea-4724-8b42-0425a9c54b61' # Bikes
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

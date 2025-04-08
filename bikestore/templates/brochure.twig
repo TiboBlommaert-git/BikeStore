@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    {# {% set entry = craft.entries.section('brochureAanvragen').slug('brochure-aanvragen').one() %}
+    <title>{{ entry.title }}</title>
+    <meta name="description" content="{{ entry.description }}">
+    <meta property="og:title" content="{{ entry.title }}">
+    <meta property="og:description" content="{{ entry.description }}">
+    <meta property="og:url" content="{{ entry.urlAanbod }}">     #}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <script src="{{siteUrl}}vue-assets/js/checkout1.js"></script>
+    <link rel="stylesheet" href="{{siteUrl}}vue-assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="{{siteUrl}}vue-assets/assets/favicon.ico">
+</head>
+
+<body class="bg-primary-white"><div id="top"></div>
+
+
+{% include 'upper-navbar.twig' %}
+
+{% include 'navbar-hero.twig' %}
+
+
+ <div class="lg:h-824 sm:h-476 flex lg:relative bg-nav-text-green lg:bg-white z-0">
+      <div class="hidden lg:block lg:w-2/5 bg-primary-white flex justify-center items-center">
+        <img src="./vue-assets/assets/fietsverzekering-kosten.svg" alt="old bike" class="mr-6 absolute top-1/2 w-1/2 sm:w-1/2 md:w-2/5 transform -translate-x-1/4 -translate-y-1/2 ">
+      </div>
+
+    <div class="w-full lg:w-3/5 bg-nav-text-green flex justify-center">
+      <div class="flex w-full lg:w-4/5 justify-end items-center md:h-full md:py-0 py-10">
+        <div class="flex flex-col text-left text-primary-white px-6">
+
+        <p class="font-black font-sofia text-3xl md:text-5xl xl:text-7xl font-sofia mb-8">Gratis brochure - Download hier!</p>
+        
+          <p class="text-md md:text-xl">
+            Wilt u meer weten over onze elektrische fietsen? Bent u benieuwd wat Bikestore u allemaal te bieden heeft? Vraag een gratis brochure aan. U ontvangt direct onze digitale brochure. De brochure staat boordevol informatie over onze elektrische fietsen.
+          </p>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="max-w-screen-xl md:mx-auto px-6 py-10 bg-primary-white md:mt-10">
+    <div class="bg-primary-white lg:py-0">
+        <h2 class="text-lg md:text-xl mb-2 font-semibold font-sofia">Krijg onze uitgebreide brochure in je downloads.</h2>
+        <h2 class="text-md md:text-xl mb-8">Ontdek het gemak en comfort van het downloaden van onze gratis brochure, waar het jou het beste uitkomt: thuis of onderweg. Volledig vrijblijvend, zodat jij met vertrouwen de perfecte keuze kunt maken..</h2>
+
+       <div class="text-left xl:text-right lg:col-span-2 lg:mt-2 mt-4 flex justify-start">
+                <a href="{{siteUrl}}/vue-assets/assets/bikestoreToelichting.pdf" download="brochure-bikestore.pdf" class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-sofia border-2 border-nav-text-green transition-colors duration-400 delay-50 hover:bg-primary-white hover:text-nav-text-green">
+                Download onze brochure
+              </a>
+            </div>
+    </div> 
+</div>
+{% include 'footer.twig' %}<a href="#top" class="fixed right-4 text-xs  bottom-4 text-white bg-fixed-nav-green p-2 rounded-full px-4 shadow-lg z-50"> Terug naar boven </a>
+
+</body>
+
+<style>
+    input[type='checkbox'] {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 20px;
+      height: 20px;
+      background: transparent;
+      border: 2px solid #36493D;
+      border-radius: 1px;
+      position: relative;
+    }
+
+    input[type='checkbox']:checked::before {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 10px;
+      border: solid #36493D;
+      border-width: 0 2px 2px 0;
+      top: 2px;
+      left: 7px;
+      transform: rotate(45deg);
+    }
+</style>

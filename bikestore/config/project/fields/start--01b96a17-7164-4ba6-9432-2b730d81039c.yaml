@@ -1,0 +1,14 @@
+columnSuffix: yarmbunt
+contentColumnType: time
+fieldGroup: 15aca9d8-3109-47f8-b2d9-c1c474a09489 # Openingsuren
+handle: start
+instructions: null
+name: start
+searchable: false
+settings:
+  max: null
+  min: null
+  minuteIncrement: 30
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Time

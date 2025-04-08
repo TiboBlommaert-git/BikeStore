@@ -1,0 +1,24 @@
+fieldLayouts:
+  813bafde-0c8f-41c8-b6a3-9112698d3d55:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 00d1d7bb-7782-4c36-be3b-d7ef4dca4a84 # navigation
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0b77e94a-c288-4cd0-8683-8d200a290260
+            userCondition: null
+            warning: null
+            width: 100
+        name: navigation
+        uid: 9ea65d18-81e9-4bd5-8efb-d75deee1950c
+        userCondition: null
+handle: footerNavigatieServices
+name: 'footer navigatie services'
+sortOrder: 11

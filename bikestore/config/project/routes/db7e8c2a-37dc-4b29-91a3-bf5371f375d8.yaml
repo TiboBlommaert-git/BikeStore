@@ -1,0 +1,6 @@
+siteUid: null
+sortOrder: 10
+template: checkoutStap2
+uriParts:
+  - 'http://localhost/2023-2024-atelier4-bs-groep4/bikestore/web/checkout'
+uriPattern: 'http://localhost/2023-2024-atelier4-bs-groep4/bikestore/web/checkout'

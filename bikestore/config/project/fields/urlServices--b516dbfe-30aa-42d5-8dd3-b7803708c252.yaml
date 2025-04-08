@@ -1,0 +1,14 @@
+columnSuffix: lbbnunnd
+contentColumnType: string(255)
+fieldGroup: c9be2d54-b70d-4c2a-8c75-e5d27ecc8c06 # Services
+handle: urlServices
+instructions: null
+name: url
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

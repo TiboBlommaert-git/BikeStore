@@ -1,0 +1,83 @@
+fieldLayouts:
+  dabaa123-f0ad-4d8a-a0bc-48f5bdd1d5c0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: f7218e38-2a86-433c-b0c2-8b54513a6fcf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ea280e4d-be79-4ac3-88b8-ea51957f5251 # meta title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c8e6c13a-8a13-4e47-b0ee-9e4eb04ed516
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 983727ed-8ebc-4975-888c-dd5d217a186c # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ed32c975-04b1-4bc2-b517-26aabeaa860b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b5b91cb7-334f-431f-af73-253e820af38c # url
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b4f76b58-aa93-42a5-aa1b-2dfebbd8edcc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: 94f619d1-f338-46d0-89db-80b1c7282856
+        userCondition: null
+handle: accessoiresMeta
+hasTitleField: true
+name: AccessoiresMeta
+section: 4fea2cbe-df9c-457c-aec9-7815e53a4cd9 # AccessoiresMeta
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

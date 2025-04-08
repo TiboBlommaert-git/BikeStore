@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Bikestore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <script src="{{siteUrl}}/vue-assets/js/checkout1.js"></script>
+    <link rel="stylesheet" href="{{siteUrl}}/vue-assets/css/customstyle.css">
+
+     <link rel="icon" type="image/x-icon" href="{{siteUrl}}/vue-assets/assets/favicon.ico">
+</head>
+
+<body class="bg-primary-white"><div id="top"></div>
+
+
+{% include 'upper-navbar.twig' %}
+
+{% include 'navbar.twig' %}
+
+
+    <div class="max-w-screen-xl md:mx-auto">
+        <div class="mb-12 mt-12">
+            <button class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-inter border border-white transition-colors duration-400 delay-50 hover:bg-unieke-services-green flex items-center">
+                <img src="./vue-assets/assets/backpijl.svg" alt="whitepijl" class="mr-2 h-3 bg-cover">
+                terug
+            </button>
+    
+            <div class="px-8 lg:px-0">
+                <img src="./img/voorbeeldblog.png" class="mt-8 w-full" alt="afbeeldingBlogpost"> 
+                <div class="font-sofia mt-20">
+                    <p class="font-semibold text-nav-text-green font-sofia text-3xl md:text-5xl mb-4">Beveilig uw e-bike, ook op vakantie!</p>
+                    <p class="text-3xl mb-4">categorie van de blogpost</p>
+                    <div class="gap-12 flex">
+                        <p class="text-lg mb-2">29/02/2024</p>
+                        <p class="text-lg mb-2 text-nav-text-green">Bikestore</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="mb-20 bg-nav-text-green py-20">
+        <div class="max-w-screen-xl md:mx-auto">
+            <p class="text-xl text-primary-white px-8 xl:px-0">Grote kans dat u deze zomer weer vaker op pad bent met de e-bike en al meerdere heerlijke fietstochten heeft gemaakt. 
+                Er zijn steeds meer e-bikes op straat, zeker ook na de flinke stijging in e-bikeverkoop tijdens de coronacrisis. 
+                Dit betekent wel dat u extra goed op moet letten of uw e-bike goed beveiligd is. Ook fietsdieven vinden uw nieuwe e-bike erg mooi.
+                Wij geven u tips om uw e-bike te beveiligen, specifiek voor deze zomer en op vakantie. Zo kunt u ook bij terugkomst en in de herfstmaanden van uw e-bike blijven genieten!
+            </p> 
+        </div>
+    </div>
+
+    <div class="max-w-screen-xl md:mx-auto">
+        <div class="mb-20 lg:mb-40 flex flex-col lg:flex-row justify-center items-center">
+            <p class=" font-semibold text-nav-text-green font-sofia text-2xl md:text-2xl font-sofia mb-4 px-8 lg:px-0">Op vakantie met de e-bike? Sluit een fietsverzekering af</p>
+            <p class="text-xl lg:w-2/3 flex justify-center px-8 lg:px-0">
+                Ook als u uw e-bike niet meeneemt op vakantie, is het natuurlijk altijd verstandig om een fietsverzekering af te sluiten. 
+                E-bikes zijn populair, helaas ook bij fietsdieven. Op vakantie is het zeker verstandig om uw e-bike mee te verzekeren. 
+                Gaat u naar het buitenland op vakantie met de e-bike? Controleer dan goed of de verzekering voor uw e-bike ook daar van kracht is.
+            </p>
+        </div>
+    </div>
+    {% include 'footer.twig' %}
+</body>

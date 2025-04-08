@@ -1,0 +1,253 @@
+descriptionFormat: '{product.title} - {title}'
+handle: zadels
+hasDimensions: true
+hasProductTitleField: true
+hasVariantTitleField: false
+hasVariants: false
+name: Zadels
+productFieldLayouts:
+  c6ebaaf5-8c3b-4d30-b6ca-f490f4b572e5:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\commerce\fieldlayoutelements\ProductTitleField
+            uid: 55f15cec-352c-4ca1-b777-23b4d8ceddfb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 59c88e68-f168-4654-886d-86842d6dcd1c # Product description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 76c6edea-2277-4636-ae32-d5dc225d6844
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ca93e26b-7c3b-4b95-822a-3c98dda646f3 # Merk accessoire
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0837da3e-9a1c-4019-8df3-12a0a167880a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 281d7bd3-703a-44b8-b652-bcc03db58384 # Product image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fed15d73-d40e-48c7-903b-9d4d373a9d7e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c57be9e7-ae3c-456a-bf61-032f24406178 # Product price
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: de1f1b47-dff0-4744-82f8-c8650ce57216
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 08dc7f84-01d4-40de-a42a-84ed523b2ea4 # Merk
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c064999d-6e53-45b7-ac9e-111175c2ad57
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 503a41f8-7fe9-4f52-bd6d-07906c0dd799 # Type zadel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bfb4b185-13d5-4259-9d43-c9552da157c1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cdcfd916-0ecb-4841-8f7d-c1f533a53903 # Zithouding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2f6fcea9-e724-4ade-9edb-efe690314d36
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 20216e26-8489-4be7-b48e-987cead818ce # Type accessoire
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 784450ad-ae8e-4b9f-b687-db11290bc9f8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b524bb36-1df8-4c51-84fb-f2297cc36db6 # Geslacht
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aa0e068c-07ff-482a-b791-c5090850e0f6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 25a2e0cf-475e-4acc-a7ad-b5f52c5fa4be # Product colours
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 88fd6b9f-2b01-4d61-b65f-d83867ae6c31
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d6e32a5a-469e-412b-bd31-cd31cc3face4 # Breedte accessoire
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bcf00bef-8643-4e72-b215-03aef55b34d8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 683007b9-9347-4aea-b838-555157288ec7 # Lengte accessoire
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 401fb618-0ad1-4855-bc39-32128a58b184
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: aefc77b3-555e-4a21-bf10-04904078da97 # Gewicht accessoire
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: be5df712-904d-4e4b-b17a-ecda5f1deee5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fefb34e1-3b89-4ab5-b488-0d19eefff2e9 # Geschikt voor
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8a033116-60c1-42be-86e9-e5925b72df48
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3edb0dfd-fbcd-472e-9179-2ffe6e3d8649 # Minpunten
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 55683fd1-1bb3-42f1-96bc-4f6dc2bf1d58
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a83a6a9e-1c1d-45e3-8b67-cb6bd839b794 # pluspunten
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6cb93ab1-00b7-4f77-a2c9-53131c590c8d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\commerce\fieldlayoutelements\VariantsField
+            uid: 07967544-8dbf-4646-b824-1284caeafdef
+            userCondition: null
+            warning: null
+        name: Content
+        uid: dc3f4293-277e-486b-869a-b5934b8fbd32
+        userCondition: null
+productTitleFormat: ''
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    hasUrls: true
+    template: ''
+    uriFormat: 'zadels/{slug}'
+skuFormat: '{product.slug}'
+variantTitleFormat: '{product.title}'

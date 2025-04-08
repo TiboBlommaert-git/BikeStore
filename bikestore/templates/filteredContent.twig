@@ -1,0 +1,9 @@
+{% for bike in bikeEntries %}
+    {# Render your bike entry as needed #}
+    <div>
+        <img src="{{ bike.productImage.one().getUrl() }}" alt="{{ bike.productImage.one().title }}">
+        <h2>{{ bike.title }}</h2>
+        <p>{{ bike.productPrice|money }}</p>
+        {# Add more details as needed #}
+    </div>
+{% endfor %}

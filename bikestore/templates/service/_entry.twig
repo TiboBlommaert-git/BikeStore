@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    {% set entry = craft.entries.section('service').slug('service').one() %}
+    <title>{{ entry.title }}</title>
+    <meta name="description" content="{{ entry.description }}">
+    <meta property="og:title" content="{{ entry.title }}">
+    <meta property="og:description" content="{{ entry.description }}">
+    <meta property="og:url" content="{{ entry.urlAanbod }}">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <script type="module" src="{{siteUrl}}/vue-assets/js/homepage.js"></script>
+    <link rel="stylesheet" href="{{siteUrl}}/vue-assets/css/style.css">
+     <link rel="icon" type="image/x-icon" href="{{siteUrl}}/vue-assets/assets/favicon.ico">
+</head>
+
+<body class="bg-primary-white"><div id="top"></div>
+
+
+{% include 'upper-navbar.twig' %}
+
+{% include 'navbar-hero.twig' %}
+
+
+
+<div class="lg:h-824 sm:h-476 flex lg:relative bg-nav-text-green lg:bg-white z-0">
+    <div class="hidden lg:block lg:w-2/5 bg-primary-white flex justify-center items-center">
+    <img src="vue-assets/assets/service.svg" alt="service" class="mr-12 absolute top-1/2 w-1/2 sm:w-1/2 md:w-1/3 transform -translate-x-1/4 -translate-y-1/2">
+</div>
+
+    <div class="w-full lg:w-3/5 bg-nav-text-green flex justify-center">
+      <div class="flex justify-end items-center md:h-full">
+        <div class="xl:w-4/5 w-full flex flex-col text-left text-primary-white sm:px-16 md:px-20 px-6 my-10 sm:my-0 bg-nav-text-green">
+        
+          <div class="font-black text-5xl md:text-7xl font-inter mb-8">
+            <p>Onze
+service</p>
+          </div>
+          <div class="font-inter">
+            <p class="mb-8">Ontdek het gemak van onze elektrische fietsen met service aan huis! Of je nu naar je werk fietst of de omgeving verkent, wij zorgen voor jouw fiets. Ons team staat klaar voor periodiek onderhoud en reparaties, waar en wanneer het jou uitkomt. Geniet van de vrijheid van elektrisch fietsen met onze professionele service aan huis. Maak vandaag nog een afspraak en ervaar het zelf!</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+<div class="flex sm:flex-row flex-col min-h-screen">
+    <div class="xl:w-1/2 w-full flex flex-col justify-center text-left sm:px-20 px-6 my-10 sm:my-0">
+      <div class="font-semibold text-3xl font-sofia  mb-4">
+        <p>
+          E-bike  
+ <span class="text-nav-text-green">advies </span> en <span class="text-nav-text-green">proefrit </span> op locatie
+</p>
+      </div>
+
+      <div class="font-inter">
+        <p class="mb-4"><span class="font-medium">Vraag een vrijblijvende proefrit aan.</span><br>
+Eén van onze Bikestore e-bikespecialisten legt met jou een afspraak vast.
+Op het afgesproken tijdstip komen wij langs met een selectie Bikestore fietsen.
+Ter plaatse adviseren wij je bij het maken van de juiste keuze.
+Jij krijgt ook tips en advies rond het gebruik van de e-bike en hoe je je gedraagt in het verkeer.
+
+</p>
+        <p class="mb-4"><span class="font-medium">Probeer gerust verschillende modellen uit.</span><br>
+Wij rijden trouwens met je mee. Op de manier kan je onderweg je ervaringen delen.
+We hebben liever dat je hiervoor voldoende tijd uittrekt, dan dat je overhaaste beslissingen neemt.
+</p>
+        <p class="mb-4"><span class="font-medium">Overtuigd van onze kwaliteit?</span><br>
+Dan leggen we de gekozen elektrische fiets voor je vast.
+Als de fiets op stock is, wordt hij binnen 5 dagen rijklaar bij jou thuis afgeleverd, zo kan je meteen beginnen fietsen.
+</p>
+        
+      </div>
+    </div>
+    <div class="xl:w-1/2 w-full sm:block">
+      <img class="w-full h-full object-cover" src="vue-assets/assets/bikeside.svg" alt="bikeside" />
+    </div>
+  </div>
+  <div class="flex sm:flex-row-reverse flex-col min-h-screen bg-nav-text-green text-primary-white">
+    <div class="xl:w-1/2 w-full flex flex-col justify-center text-left sm:px-16 md:px-20 px-6 my-10 sm:my-0">
+      <div class="font-semibold text-3xl font-sofia mb-4 ">
+        <p>Levering van je elektrische 
+fiets aan huis</p>
+      </div>
+      <div class="font-inter">
+        <p class="mb-4">Bij de bestelling, leggen we meteen de datum van levering vast. Wij stellen de fiets op jouw maat af en voorzien hem van de gekozen accessoires.
+De rijklare e-bike wordt geheel gratis bij jou thuis geleverd.
+Jij kan meteen in alle comfort de weg op.
+
+</p>
+    <a href="{{siteUrl}}/contact" class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-inter border border-white transition-colors duration-400 delay-50 hover:bg-primary-white hover:text-nav-text-green">Neem contact op</a>
+      </div>
+    </div>
+    <div class="xl:w-1/2 w-full sm:block">
+      <img class="w-full h-full object-cover" src="vue-assets/assets/fietsenstelen.svg" alt="Bikepicture" />
+    </div>
+  </div>
+
+  <div class="bg-nav-text-green w-full">
+  <div class="grid grid-cols-1 lg:grid-cols-3 text-primary-white mr-20">
+    <div class="mt-20 mb-12 ml-20 "><div class="font-bold  text-xl md:text-xl font-inter ">
+            <p>Onderhoud op locatie </p>
+          </div>
+          <p class="mb-3">1ste jaar is het gratis</p>
+          <p class="mb-4">Ook al leveren we enkel kwaliteitsfietsen, toch heeft een elektrische fiets een jaarlijks onderhoud nodig.
+Onze ervaren fietstechnieker komt tot bij jou thuis om het onderhoud uit te voeren. Verplaatsingskosten rekenen we niet aan en de eerste onderhoudsbeurt is altijd gratis.</p>
+    <a href="{{siteUrl}}/contact" class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-inter border border-white transition-colors duration-400 delay-50 hover:bg-primary-white hover:text-nav-text-green">Neem contact op</a>
+          </div>
+    <div class="lg:mt-20 mb-12 ml-20 "><div class="font-bold  text-xl md:text-xl font-inter mb-3">
+            <p>Herstellingen</p>
+          </div>
+          <p class="mb-6">Bij een defect of een probleem neem je gewoon contact met ons op.
+Wij komen tot bij jou thuis.<br>
+Kan het probleem niet ter plaatse worden opgelost, dan nemen we jouw fiets mee en krijg jij van ons een vervangfiets.
+
+</p></div>
+    <div class="lg:mt-20 mb-12 ml-20 "><div class="font-bold  text-xl md:text-xl font-inter ">
+            <p>Pechverhelping 24/7</p>
+          </div>
+          <p class="mb-3">1ste jaar is het gratis</p>
+          <p class="mb-2">Pech onderweg?<br>
+Dan kan je beroep doen op onze pechverhelpingservice. De klok rond hulp bij pech, diefstal of een ongeval met uw fiets. De Bikestore fietsbijstand is een samenwerking met VAB. Bij defect, ongeval of lekke band word je meteen geholpen. 24 uur per dag staan pechverhelpers paraat om je weer op weg te helpen of je veilig thuis te brengen.
+            <p class="font-bold mb-6">Nummer pechverhelping 078 222 222</p>
+</p></div>
+  </div>
+</div>
+<div class="flex sm:flex-row flex-col min-h-screen">
+    <div class="xl:w-1/2 w-full flex flex-col justify-center text-left sm:px-20 px-6 my-10 sm:my-0">
+      <div class="font-semibold text-3xl font-sofia  mb-4">
+        <p>
+ <span class="text-nav-text-green">Garantie </span>op ons assortiment
+      </div>
+
+      <div class="font-inter">
+        <p class="mb-4">Bij Bikestore krijg je levenslange garantie op het frame en 2 jaar op de onderdelen. Garantieverlenging is mogelijk via één van onze servicepakketten.<br>
+</p>
+</p>       
+ <p class="mb-4"><span class="font-medium">Een defect binnen de garantieperiode?</span><br>
+Dan herstellen of vervangen we jouw e-bike kosteloos.
+Contacteer ons hier voor meer informatie over de garantie.
+Kan je fiets niet ter plaatse hersteld worden, dan krijg je een gratis Bikestore vervangfiets.
+Onderdelen die aan slijtage onderhevig zijn zoals banden en remblokjes, vallen niet onder de garantie.
+</p>     
+      </div>
+    </div>
+    <div class="xl:w-1/2 w-full sm:block">
+      <img class="w-full h-full object-cover" src="vue-assets/assets/boomfiets.svg" alt="bikeside" />
+    </div>
+  </div>
+  <div class="flex sm:flex-row-reverse flex-col min-h-screen">
+    <div class="xl:w-1/2 w-full flex flex-col justify-center text-left sm:px-16 md:px-20 px-6- my-10 sm:my-0">
+      <div class="font-semibold text-3xl font-sofia mb-4 ">
+        <p>Fiets<span class="text-nav-text-green">verzekering</span></p>
+      </div>
+      <div class="font-inter">
+        <p class="mb-4">Een fietsverzekering tegen diefstal of een omniumverzekering kan uiteraard ook,
+dit zorgt voor extra gemoedsrust.<br>
+Wij brengen dit verzekeringsdossier graag voor jou in orde.
+</p>
+<p class="font-semibold mb-4">Meer weten over ons 
+servicepakketten en prijzen?</p>
+<a href="{{siteUrl}}/fietsverzekering" class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-inter border border-white transition-colors duration-400 delay-50 hover:bg-unieke-services-green hover:text-primary-white">Lees meer</a>
+      </div>
+    </div>
+    <div class="xl:w-1/2 w-full sm:block">
+      <img class="w-full h-full object-cover" src="vue-assets/assets/verzekering.svg" alt="Bikepicture" />
+    </div>
+  </div>
+
+  
+
+
+  <div class="flex sm:flex-row flex-col min-h-screen">
+    <div class="xl:w-1/2 w-full flex flex-col justify-center text-left sm:px-20 px-6 my-10 sm:my-0">
+      <div class="font-semibold text-3xl font-sofia  mb-4">
+        <p> Onze 
+ <span class="text-nav-text-green">algemene voorwaarden</span>
+      </div>
+
+      <div class="font-inter">
+ <p class="mb-4"><span class="font-medium">Bij Bikestore hechten we veel belang aan transparantie en klanttevredenheid.</span></p><p class="mb-4">
+ Daarom hebben we onze algemene voorwaarden opgesteld om duidelijkheid te bieden over onze diensten, producten en jouw rechten als klant. We raden je aan om deze voorwaarden zorgvuldig door te nemen voordat je een aankoop doet of gebruik maakt van onze services. Door verder te klikken, ga je akkoord met onze algemene voorwaarden. Klik hieronder om ze te bekijken en bij vragen staan we altijd voor je klaar!
+</p>     
+<a href="{{siteUrl}}/algemeneVoorwaarden" class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-inter border border-white transition-colors duration-400 delay-50 hover:bg-unieke-services-green hover:text-primary-white">Lees meer voorwaarden</a>
+      </div>
+    </div>
+    <div class="xl:w-1/2 w-full sm:block">
+      <img class="w-full h-full object-cover" src="vue-assets/assets/fietsbergen.svg" alt="bikeside" />
+    </div>
+  </div>
+    {% include 'footer.twig' %}<a href="#top" class="fixed right-4 bottom-4 text-white text-xs  bg-fixed-nav-green p-2 rounded-full px-4 shadow-lg z-50"> Terug naar boven </a>
+
+
+</body>

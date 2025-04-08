@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    {% set entry = craft.entries.section('accessoiresMeta').slug('accessoiresmeta').one() %}
+    <title>{{ entry.title }}</title>
+    <meta name="description" content="{{ entry.description }}">
+    <meta property="og:title" content="{{ entry.title }}">
+    <meta property="og:description" content="{{ entry.description }}">
+    <meta property="og:url" content="{{ entry.urlAanbod }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <link rel="stylesheet" href="{{ siteUrl }}vue-assets/css/style.css">
+    {# <script type="module" src="{{siteUrl}}/vue-assets/js/assortimentpage.js"></script> #}
+    <link rel="stylesheet" href="{{siteUrl}}/vue-assets/css/custom.css">
+    <link rel="icon" type="image/x-icon" href="{{siteUrl}}/vue-assets/assets/favicon.ico">
+</head>
+<body class="bg-primary-white"><div id="top"></div>
+
+
+{% include 'upper-navbar.twig' %}
+{% include 'navbar.twig' %}
+
+<div class="max-w-screen-xl mt-10 mb-20 md:mx-auto px-6">       
+        <div class="relative inline-block w-full sm:w-40 mr-8 md:mt-6 mt-6">
+            <select id="frameDropdown"
+                class="block appearance-none w-full bg-primary-white border-nav-text-green border-2 text-nav-text-green py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                <option selected disabled>Type</option>
+               {% set frametypeCategories = craft.categories.group('accessoireType').all() %}
+                {% for frametype in frametypeCategories %}
+                    <option id="{{ frametype.title }}">{{ frametype.title }}</option>
+                {% endfor %}
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#557260" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </div>
+        </div>
+        <div class="relative inline-block w-full sm:w-40 mr-8 md:mt-6 mt-6">
+            <select id="brandDropdown"
+                class="block appearance-none w-full bg-primary-white border-nav-text-green border-2 text-nav-text-green py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                <option selected disabled>Merk</option>
+                {% set merkCategories = craft.categories.group('merkAccessoires').all() %}
+                {% for merk in merkCategories %}
+                    <option>{{ merk.title }}</option>
+                {% endfor %}
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#557260" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </div>
+        </div>
+        <div class="relative inline-block w-full sm:w-60 mt-6 lg:mt-0">
+            <div class="flex items-center">
+                 {% set products = craft.products.type(['zadels', 'helmen']).all()%}
+            {% set productPrices = products|map(product => product.productPrice.getAmount) %}
+
+            {% if productPrices|length > 0 %}
+                {% set minPrice = (productPrices|reduce((min, v) => v < min ? v : min, productPrices[0]) / 100)|round(0, 'floor') %}
+                {% set maxPrice = (productPrices|reduce((max, v) => v > max ? v : max, productPrices[0]) / 100)|round(0, 'floor') %}
+            {% else %}
+                {% set minPrice = 0 %}
+                {% set maxPrice = 0 %}
+            {% endif %}
+<p class="text-nav-text-green">0</p>
+                  <input type="range" min="0" max="{{ maxPrice }}" step="1" class="w-72 md:w-72 mr-4 ml-4 range-track-custom range-thumb-custom bg-primary-white" id="priceSlider">
+                  <input type="number" min="0" max="{{ maxPrice }}" step="1"
+    class="bg-primary-white border-b-2 border-nav-text-green text-nav-text-green py-1 pr-3 w-input text-right ml-2 mb-2" id="maxPriceInput" value="{{ maxPrice }}">
+                </div>
+            </div>
+    {# Fetch bike entries from the "Bikes" section #}
+ <div class="max-w-screen-xl mx-auto lg:px-0 px-6 mt-10">
+      <div
+        class="grid lg:grid-cols-12 md:grid-cols-12 grid-cols-12-2 gap-4 justify-items-center " id="accesEntriesContainer"
+      >
+      {% set products = craft.products.type(['zadels', 'helmen', 'fietspompen', 'bidonhouder', 'verlichting', 'fietssloten' , 'fietscomputers', 'spatborden', 'reparatiekit']).all()|slice(0, 9)  %}
+        {% if products|length %}
+         {% for product in products %} 
+          {% set value = product.productPrice|money %} 
+         {% set image = product.productImage.one() %} 
+          {% set merkCategory = product.merkAccessoire.one() %} 
+          {% set typeAccessoire = product.typeAccessoire.one() %} 
+        <div
+          class="md:col-span-6 lg:col-span-4 col-span-8 mx-auto sm:mb-4 mb-4 cursor-pointer accesCard" data-type="{{typeAccessoire | default('') }}"
+                    data-brand="{{ merkCategory | default('') }}"
+                    data-price="{{ product.productPrice.getAmount() | default(0) }}" 
+        >
+          {% if image %}
+          <a href="{{ siteUrl }}/accessoireDetail?id={{ product.id }}">
+            <img
+              src="{{ image.getUrl() }}"
+              alt="{{ image.title }}"
+              class="lg:w-250p md:w-250p sm:w-100p w-100p h-auto"
+            />
+          </a>
+          {% else %}
+          <p>No image available for this entry.</p>
+          {% endif %}
+          <h2 class="text-bike-color-dark-grey mt-3 font-semibold text-h2">
+            {{ product.title }}
+          </h2>
+          <h4 class="text-bike-color-dark-grey mb-3 mt-min5px">
+            {% set merkCategory = product.merkAccessoire.one() %} {% if merkCategory %}
+            {{ merkCategory.title }}
+            {% endif %}
+          </h4>
+          <div class="flex mb-2">
+            {% if product.productColours|length %} {%
+            for row in product.productColours %} {% if row.hexcode is not empty %}
+            <span
+              class="block h-2 w-5 mr-1"
+              style="background-color: {{ row.hexcode }}"
+            ></span>
+            {% endif %} {% endfor %} {% else %}
+            <p>No colors available for this bike.</p>
+            {% endif %}
+          </div>
+          <h3 class="font-bold">{{ value }}</h3>
+        </div>
+        {% endfor %} {% else %}
+        <p>No bike entries found.</p>
+        {% endif %}
+      </div>
+    </div>
+</div>
+    <section class="mb-52 max-w-screen-xl mx-auto">
+        <div class="block lg:flex">
+          <div class="w-2/2 xl:w-1/2 flex justify-center mb-10 lg:mb-0">
+            <video class="w-full h-full object-cover" autoplay loop muted>
+            <source src="vue-assets/assets/helmAnimatie.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>         
+          </div>
+
+          <div class="w-2/2 xl:w-1/2 px-8 lg:px-0 my-auto ml-4">
+            <div>
+    
+              
+              <h2 class="text-3xl text-nav-text-green mt-4 font-sofia">Abus Hyban 
+                Fietshelm</h2>
+              <h3 class="text-2xl text-nav-text-green mb-2 font-sofia">Abus</h3>
+             
+              <p class="font-inter">Abus Hyban fietshelm biedt stijlvolle bescherming, 
+                ideaal voor stadsfietsers die comfort en veiligheid 
+                op prijs stellen.</p>
+              <h2 class="text-3xl text-nav-text-green">€46,99</h2>
+
+              <div class=" mt-8">
+                <a href="" class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-inter transition-colors duration-400 delay-50 hover:bg-secondary-green hover:text-primary-white">Lees Meer</a>
+            </div>
+          </div>
+        </div>
+    </section>
+    {# Fetch bike entries from the "Bikes" section #}
+ <div class="max-w-screen-xl mx-auto lg:px-0 px-6 mt-10">
+      <div
+        class="grid lg:grid-cols-12 md:grid-cols-12 grid-cols-12-2 gap-4 justify-items-center"
+      >
+      {% set products = craft.products.type([ 'zadels', 'helmen']).all()|slice(9, 18)  %}
+        {% if products|length %}
+         {% for product in products %} 
+          {% set value = product.productPrice|money %} 
+         {% set image = product.productImage.one() %} 
+        <div
+          class="md:col-span-6 lg:col-span-4 col-span-8 mx-auto sm:mb-4 mb-4 cursor-pointer accesCard" data-type="{{typeAccessoire | default('') }}"
+                    data-brand="{{ merkAccessoire | default('') }}"
+                    data-price="{{ acces.productPrice.getAmount() | default(0) }}" 
+        >
+          {% if image %}
+          <a
+            href="{{
+              url(
+                '{{siteUrl}}/accessoireDetail',
+                { id: product.id }
+              )
+            }}"
+          >
+            <img
+              src="{{ image.getUrl() }}"
+              alt="{{ image.title }}"
+              class="lg:w-250p md:w-250p sm:w-100p w-100p h-auto"
+            />
+          </a>
+          {% else %}
+          <p>No image available for this entry.</p>
+          {% endif %}
+          <h2 class="text-bike-color-dark-grey mt-3 font-semibold text-h2">
+            {{ product.title }}
+          </h2>
+          <h4 class="text-bike-color-dark-grey mb-3 mt-min5px">
+            {% set merkCategory = product.merkAccessoire.one() %} {% if merkCategory %}
+            {{ merkCategory.title }}
+            {% endif %}
+          </h4>
+          <div class="flex mb-2">
+            {% if product.productColours|length %} {%
+            for row in product.productColours %} {% if row.hexcode is not empty %}
+            <span
+              class="block h-2 w-5 mr-1"
+              style="background-color: {{ row.hexcode }}"
+            ></span>
+            {% endif %} {% endfor %} {% else %}
+            <p>No colors available for this bike.</p>
+            {% endif %}
+          </div>
+          <h3 class="font-bold">{{ value }}</h3>
+        </div>
+        {% endfor %} {% else %}
+        <p>No bike entries found.</p>
+        {% endif %}
+      </div>
+    </div>
+</div>
+      <section class="mb-52 w-full bg-nav-text-green">
+
+        <div class=" py-28 px-8 lg:px-0 max-w-screen-xl mx-auto">
+          <h2 class="text-4xl text-primary-white mb-2 font-sofia">Onze accesoires, uw plezier!</h2>
+          <p class="text-md font-inter text-primary-white">Ontdek een ruim assortiment fietsaccessoires tegen scherpe prijzen op bikestore.be! Van praktische fietspompen, sloten en verlichting tot comfortabele zadels,
+            fietstassen en bidonhouders, wij hebben alles voor stadsfietsen, mountainbikes, racefietsen en elektrische fietsen. Samenwerking met gerenommeerde merken
+            garandeert duurzaamheid en functionaliteit. Onze gebruiksvriendelijke website maakt winkelen eenvoudig en veilig, met snelle levering. Verbeter jouw fietservaring 
+            vandaag nog met hoogwaardige accessoires van bikestore.be!</p>
+        </div>
+      </section>
+      <div class="max-w-screen-xl mx-auto lg:px-0 px-6 mt-10">
+      <div
+        class="grid lg:grid-cols-12 md:grid-cols-12 grid-cols-12-2 gap-4 justify-items-center"
+      >
+{% set products = craft.products.type(['zadels', 'helmen']).all()|slice(9, 18)  %}
+        {% if products|length %}
+         {% for product in products %} 
+          {% set value = product.productPrice|money %} 
+         {% set image = product.productImage.one() %} 
+        <div
+          class="md:col-span-6 lg:col-span-4 col-span-8 mx-auto sm:mb-4 mb-4 cursor-pointer accesCard"data-type="{{typeAccessoire | default('') }}"
+                    data-brand="{{ merkAccessoire | default('') }}"
+                    data-price="{{ acces.productPrice.getAmount() | default(0) }}" 
+        >
+          {% if image %}
+          <a
+            href="{{
+              url(
+                '{{siteUrl}}/accessoireDetail',
+                { id: product.id }
+              )
+            }}"
+          >
+            <img
+              src="{{ image.getUrl() }}"
+              alt="{{ image.title }}"
+              class="lg:w-250p md:w-250p sm:w-100p w-100p h-auto"
+            />
+          </a>
+          {% else %}
+          <p>No image available for this entry.</p>
+          {% endif %}
+          <h2 class="text-bike-color-dark-grey mt-3 font-semibold text-h2">
+            {{ product.title }}
+          </h2>
+          <h4 class="text-bike-color-dark-grey mb-3 mt-min5px">
+            {% set merkCategory = product.merkAccessoires.one() %} {% if merkCategory %}
+            {{ merkCategory.title }}
+            {% endif %}
+          </h4>
+          <div class="flex mb-2">
+            {% if product.productColours|length %} {%
+            for row in product.productColours %} {% if row.hexcode is not empty %}
+            <span
+              class="block h-2 w-5 mr-1"
+              style="background-color: {{ row.hexcode }}"
+            ></span>
+            {% endif %} {% endfor %} {% else %}
+            <p>No colors available for this bike.</p>
+            {% endif %}
+          </div>
+          <h3 class="font-bold">{{ value }}</h3>
+        </div>
+        {% endfor %} {% else %}
+        <p>No bike entries found.</p>
+        {% endif %}
+      </div>
+    </div>
+</div>
+{% include 'footer.twig' %}<a href="#top" class="fixed right-4 bottom-4 text-xs text-white bg-fixed-nav-green p-2 rounded-full px-4 shadow-lg z-50"> Terug naar boven </a>
+        <script type="module" src="{{siteUrl}}/vue-assets/js/filtersAssortiment.js"></script>
+
+
+
+</body>
+</html>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var bikeEntriesContainer = document.getElementById('accesEntriesContainer');
+  var typeDropdown = document.querySelector('#frameDropdown');
+  var brandDropdown = document.querySelector('#brandDropdown');
+  var priceSlider = document.querySelector('#priceSlider');
+
+  document.getElementById('maxPriceInput').addEventListener('change', function() {
+    document.getElementById('priceSlider').max = this.value;
+  });
+
+  document.getElementById('priceSlider').addEventListener('input', function() {
+    document.getElementById('maxPriceInput').value = this.value;
+    console.log(this.value);
+  });
+
+  typeDropdown.addEventListener('change', filterBikes);
+  brandDropdown.addEventListener('change', filterBikes);
+  priceSlider.addEventListener('input', filterBikes);
+
+
+  function filterBikes() {
+    const type = frameDropdown.value;
+    const brand = brandDropdown.value;
+    const maxPrice = Number(document.querySelector('#maxPriceInput').value.trim());
+    const bikeEntries = bikeEntriesContainer.querySelectorAll('.accesCard');
+
+
+    bikeEntries.forEach(function (product) {
+      const productType = product.getAttribute('data-type');
+      const productFrame = product.getAttribute('data-frame');
+      const productBrand = product.getAttribute('data-brand');
+      const productPrice = Math.floor(parseFloat(product.getAttribute('data-price')) / 100);
+       console.log(productPrice);
+      const typeMatch = !type || productType === type;
+      const brandMatch = !brand || productBrand === brand;
+      const maxPriceMatch = maxPrice === 0 || productPrice <= maxPrice;
+      console.log(maxPriceMatch);
+      console.log(productPrice);
+      console.log(maxPrice);
+      const showBike = (type == "Type" || typeMatch) && (brand == "Merk" || brandMatch) && maxPriceMatch;
+      console.log(showBike);
+     if (showBike == true) {
+          product.style.display = 'block';
+      } 
+      else {
+          product.style.display = 'none';
+      }
+     
+    });
+let bikeCards = document.querySelectorAll('.accesCard');
+
+let anyBlock = Array.from(bikeCards).some(function(bikeCard) {
+  return getComputedStyle(bikeCard).display === 'block';
+});
+
+// Get the js-geen-bikes element
+let geenBikes = document.querySelector('.js-geen-bikes');
+
+// If no bikeCard elements have display: block, set js-geen-bikes to display: block
+// Otherwise, set js-geen-bikes to display: none
+if (!anyBlock) {
+  geenBikes.style.display = 'block';
+} else {
+  geenBikes.style.display = 'none';
+}
+   
+  }
+
+  
+});
+</script>
+
+<style>
+.flip-image {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px; /* Adjust this value to change the thickness */
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: #557260;
+    height: 5px; /* Adjust this value to change the thickness */
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #557260;
+    width: 10px; /* Adjust this value to change the size of the thumb */
+    height: 10px; /* Adjust this value to change the size of the thumb */
+    margin-top: -2.5px; /* Adjust this value to position the thumb in the middle of the track */
+    border-radius: 50%;
+}
+
+input[type=range]::-moz-range-track {
+    background: #557260;
+    height: 5px; /* Adjust this value to change the thickness */
+}
+
+input[type=range]::-moz-range-thumb {
+    background: #557260;
+    width: 10px; /* Adjust this value to change the size of the thumb */
+    height: 10px; /* Adjust this value to change the size of the thumb */
+    border-radius: 50%;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #557260;
+    height: 5px; /* Adjust this value to change the thickness */
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #557260;
+    height: 5px; /* Adjust this value to change the thickness */
+}
+
+input[type=range]::-ms-thumb {
+    background: #557260;
+    width: 10px; /* Adjust this value to change the size of the thumb */
+    height: 10px; /* Adjust this value to change the size of the thumb */border-radius: 50%;
+}
+</style>

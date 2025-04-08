@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Bikestore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <script src="{{siteUrl}}/vue-assets/js/checkout1.js"></script>
+    <link rel="stylesheet" href="{{siteUrl}}/vue-assets/css/style.css">
+
+     <link rel="icon" type="image/x-icon" href="{{siteUrl}}/vue-assets/assets/favicon.ico">
+</head>
+
+<body class="bg-primary-white"><div id="top"></div>
+
+
+{% include 'upper-navbar.twig' %}
+
+{% include 'navbar.twig' %}
+<div class="flex flex-col justify-center items-center mt-6 lg:mt-12 md:px-0 px-6"> 
+<img src="vue-assets/assets/bikestore-logo-nav.png" alt="logo" class="w-60 mb-8">
+{% macro errorList(errors) %}
+  {% if errors %}
+    {{ ul(errors, {class: 'errors'}) }}
+  {% endif %}
+{% endmacro %}
+
+{# `user` is defined if the form returns validation errors. #}
+{% set user = user ?? null %}
+
+<form class="text-nav-text-green md:w-96" method="post" accept-charset="UTF-8">
+  {{ csrfInput() }}
+  {{ actionInput('users/save-user') }}
+
+  <label for="username">Gebruikersnaam</label>
+  {{ input('text', 'username', user.username ?? null, {
+    id: 'username',
+    autocomplete: 'username',
+    class: 'bg-transparent border-2 border-nav-text-green rounded-1 pl-3 mt-4 footer-form w-full h-10',
+  }) }}
+  <div class="error-message mb-4">{{ user ? _self.errorList(user.getErrors('username')) }}</div>
+  {# In Craft 4, `firstName` and `lastName` were combined into a single property: #}
+  <label for="full-name">Volledige naam</label>
+  {{ input('text', 'fullName', user.fullName ?? null, {
+    id: 'full-name',
+    autocomplete: 'name',
+    class: 'bg-transparent border-2 border-nav-text-green rounded-1 pl-3 mt-4 footer-form w-full h-10',
+  }) }}
+  <div class="error-message mb-4">{{ user ? _self.errorList(user.getErrors('fullName')) }}</div>
+
+  <label for="email">Email</label>
+  {{ input('email', 'email', user.email ?? null, {
+    id: 'email',
+    autocomplete: 'email',
+    class: 'bg-transparent border-2 border-nav-text-green rounded-1 pl-3 mt-4 footer-form w-full h-10',
+  }) }}
+  <div class="error-message mb-4">{{ user ? _self.errorList(user.getErrors('email')) }}</div>
+
+  <label for="password">Wachtwoord</label>
+  {{ input('password', 'password', null, {
+    id: 'password',
+    class: 'bg-transparent border-2 border-nav-text-green rounded-1 pl-3 mt-4 footer-form w-full h-10',
+  }) }}
+  <div class="error-message mb-4">{{ user ? _self.errorList(user.getErrors('password')) }}</div>
+
+  <div class="text-center lg:col-span-2 lg:mt-10 mt-6">
+          <button class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-sofia border-2 border-nav-text-green transition-colors duration-400 delay-50 hover:bg-primary-white hover:text-nav-text-green">Registreren</button>
+        </div>
+</form>
+</div>
+{% include 'footer.twig' %}<a href="#top" class="fixed right-4 text-xs  bottom-4 text-white bg-fixed-nav-green p-2 rounded-full px-4 shadow-lg z-50"> Terug naar boven </a>
+
+</body>
+<style>
+.error-message {
+  color: #B22222;
+}
+</style>

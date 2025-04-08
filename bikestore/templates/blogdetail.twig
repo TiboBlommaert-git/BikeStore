@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Bikestore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <script src="{{siteUrl}}/vue-assets/js/checkout1.js"></script>
+    <link rel="stylesheet" href="{{siteUrl}}/vue-assets/css/style.css">
+     <link rel="icon" type="image/x-icon" href="{{siteUrl}}/vue-assets/assets/favicon.ico">
+</head>
+
+<body class="bg-primary-white"><div id="top"></div>
+
+
+{% include 'upper-navbar.twig' %}
+
+{% include 'navbar.twig' %}
+  {# {% include 'upper-navbar.twig' %} #} {# {% include 'navbar-hero.twig' %}
+    #} {# Access URL segments to get the entry ID #} {% set postID =
+    craft.app.request.getParam('id') %} {# Retrieve the bike entry using the ID
+    #}{% set post = craft.entries.section('blogPosts').id(postID).one() %}
+ {%
+    set title = craft.categories.group('title').slug(post.typefiets) %} {% set p1 = craft.categories.group('SectionOne').slug(post.SectionOne).one() %} {% set sectionTwoCategories = craft.categories.group('sectionTwo').relatedTo(post).all() %}
+    {%
+    set tssTitel = craft.categories.group('tussenTitel').slug(post.tussenTitel).one() %}
+    {% set image = post.featureImage.one() %}
+    {% set categories = craft.categories.relatedTo(post).all() %}
+
+
+    <div class="max-w-screen-xl md:mx-auto">
+        <div class="mb-12 mt-12">
+            <button class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-inter border border-white transition-colors duration-400 delay-50 hover:bg-unieke-services-green flex items-center">
+                <img src="./vue-assets/assets/backpijl.svg" alt="whitepijl" class="mr-2 h-3 bg-cover">
+                Terug
+            </button>
+    
+            <div class="px-8 lg:px-0">
+            {% if image %}
+                <img src="{{ image.getUrl() }}" alt="{{ image.title }}" alt="afbeeldingBlogpost"> 
+          {% else %}
+          <p>No image available for this entry.</p>
+          {% endif %}
+
+                <div class="font-sofia mt-20">
+                    <p class="font-semibold text-nav-text-green font-sofia text-3xl md:text-5xl mb-4">{{post.title}}</p>
+                    <p class="text-3xl mb-4">{% for category in categories %}
+    {{ category.title }}
+{% endfor %}</p>
+                    <div class="gap-12 flex">
+                        <p class="text-lg mb-2">   {{ post.postDate|date('d/m/Y') }}
+
+</p>
+                        <p class="text-lg mb-2 text-nav-text-green">Bikestore</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="mb-20 bg-nav-text-green py-20">
+        <div class="max-w-screen-xl md:mx-auto">
+            <p class="text-xl text-primary-white px-8 xl:px-0">{{post.getFieldValue('SectionOne')}}
+            </p> 
+        </div>
+    </div>
+
+    <div class="max-w-screen-xl md:mx-auto">
+        <div class="mb-20 lg:mb-40 flex flex-col lg:flex-row justify-center items-center">
+            <p class=" font-semibold text-nav-text-green font-sofia text-2xl md:text-2xl font-sofia mb-4 px-8 lg:px-0">{{post.getFieldValue('tussenTitel')}}</p>
+            <p class="text-xl lg:w-2/3 flex justify-center px-8 lg:px-0">
+    {{post.getFieldValue('sectionTwo')}}
+            </p>
+        </div>
+    </div>
+    {% include 'footer.twig' %}<a href="#top" class="fixed right-4 text-xs  bottom-4 text-white bg-fixed-nav-green p-2 rounded-full px-4 shadow-lg z-50"> Terug naar boven </a>
+
+</body>

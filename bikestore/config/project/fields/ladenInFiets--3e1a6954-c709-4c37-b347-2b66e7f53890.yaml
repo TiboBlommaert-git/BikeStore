@@ -1,0 +1,35 @@
+columnSuffix: wyvyqzab
+contentColumnType: string(12)
+fieldGroup: f8eb45e1-fcba-46b0-99b2-3d345ac5a82c # Motor
+handle: ladenInFiets
+instructions: null
+name: 'Laden in fiets'
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Mogelijk
+        -
+          - value
+          - mogelijk
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Niet mogelijk'
+        -
+          - value
+          - nietMogelijl
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

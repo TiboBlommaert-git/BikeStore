@@ -1,0 +1,39 @@
+field: 25a2e0cf-475e-4acc-a7ad-b5f52c5fa4be # Product colours
+fieldLayouts:
+  bd481364-abe1-40cf-8bdd-78141868eb2c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 75b4c670-0c07-4d65-9bda-ac1401175ba4 # Dark grey
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4c36dee7-db3b-4546-a905-4deea240d7fe
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 8714a9cd-53c4-48fe-97dd-74b0107be554
+        userCondition: null
+fields:
+  75b4c670-0c07-4d65-9bda-ac1401175ba4: # Dark grey
+    columnSuffix: hxcoolfc
+    contentColumnType: char(7)
+    fieldGroup: null
+    handle: darkGrey
+    instructions: null
+    name: 'Dark grey'
+    searchable: false
+    settings:
+      defaultColor: '#514a49'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+handle: darkGray
+name: 'Dark grey'
+sortOrder: 3

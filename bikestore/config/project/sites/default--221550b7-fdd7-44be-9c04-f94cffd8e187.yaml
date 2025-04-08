@@ -1,0 +1,9 @@
+baseUrl: '@web'
+enabled: true
+handle: default
+hasUrls: true
+language: nl
+name: bikestore
+primary: true
+siteGroup: b1395444-857f-4449-b054-b3a07ac9d4d4 # bikestore
+sortOrder: 1

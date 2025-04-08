@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    {% set entry = craft.entries.section('blog').slug('blog').one() %}
+    <title>{{ entry.title }}</title>
+    <meta name="description" content="{{ entry.description }}">
+    <meta property="og:title" content="{{ entry.title }}">
+    <meta property="og:description" content="{{ entry.description }}">
+    <meta property="og:url" content="{{ entry.urlAanbod }}">        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <script src="{{siteUrl}}/vue-assets/js/blogfixhet.js"></script>
+    <link rel="stylesheet" href="{{siteUrl}}/vue-assets/css/style.css">
+     <link rel="icon" type="image/x-icon" href="{{siteUrl}}/vue-assets/assets/favicon.ico">
+</head>
+
+<body class="bg-primary-white"><div id="top"></div>
+
+
+{% include 'upper-navbar.twig' %}
+{% include 'navbar.twig' %}
+<div class="mx-auto px-10 sm:px-20 mt-10">
+<div class="flex flex-col items-center sm:flex-row">
+    <p class="text-nav-text-green text-4xl sm:mr-10 font-sofia font-semibold">Blog</p>
+
+    <div class="relative inline-block w-38 mt-3 sm:mt-0">
+       <select id="categorieSelect" onchange="filterPosts(this.value)" class="block appearance-none w-full bg-primary-white border-nav-text-green border-2 text-nav-text-green py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-primary-white focus:border-gray-500">
+    <option selected  value="all">Alle </option>
+    {% set categories = craft.categories.group('categoryPost').all() %}
+    {% for category in categories %}
+        <option class="{{ category.title }}" value="{{ category.id }}">{{ category.title }}</option>
+    {% endfor %}
+</select>
+
+
+
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="#557260" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6 6-6" />
+            </svg>
+        </div>
+    </div>
+    <div class="flex items-center mt-4 sm:mt-0 sm:ml-auto">
+    <img src="vue-assets/assets/vertblue.svg" onclick="toggleLayout('vert')" alt="vert" class="mr-2 js-vert hidden md:inline-block">
+    <img src="vue-assets/assets/horigroen.svg" onclick="toggleLayout('hori')" alt="hori" class="js-hori hidden md:inline-block"> 
+</div>
+</div>
+<hr class="h-200px my-2 bg-nav-text-green w-full border-1 border-nav-text-green">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 js-view">
+{% set query = craft.entries.section('blogPosts') %}
+{% set entries = query.all() %}
+{% if entries|length %}
+    {% for post in entries %}
+        {% set title = post.title %}
+        {% set image = post.featureImage.one() %}
+        {% set cat = post.category.one() %} {# Assuming each post is associated with only one category #}
+        <div class="mt-4 js-koepel" data-category="{{ cat.id }}">
+            <a href="{{ siteUrl }}/blogdetail?id={{ post.id }}">  
+                <img src="{{ image.getUrl() }}" alt="dd" class="w-full js-blogimg" />
+            </a>
+            <div class="js-txt max-w-screen-md overflow-hidden"> {# Tailwind classes toegevoegd voor responsief ontwerp #}
+                <p class="font-inter font-semibold text-2xl text-nav-text-green mt-4">{{ post.title }}</p>
+                <p class="font-inter font-medium text-md mt-1">{{ post.postDate | date('d F Y') }}</p>
+                <p class="font-inter mt-2 text-md">{{ post.SectionOne }}</p>
+                {% if cat %}
+                    <p class="font-inter mt-2 text-md">{{ cat.title }}</p>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No blog entries found.</p>
+{% endif %}
+
+
+
+
+    {# <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+    <div class="mt-4">
+        <img src="vue-assets/assets/moederzoon.svg" alt="moeder" class="w-full"> <!-- Voeg de klasse "w-full" toe -->
+        <p class="font-inter font-semibold text-2xl text-nav-text-green mt-4">Ontdek de Hottest Bike Trends van het Seizoen!</p>
+        <p class="font-inter font-medium text-md mt-1">15 februari 2024</p>
+        <p class="font-inter mt-2 text-md">Ontdek de heetste fiets trends van het seizoen! Van elektrische fietsen tot gravelbikes, wij brengen je de nieuwste innovaties en stijlen. Of je nu avontuurlijk bent of gewoon op zoek naar stijlvolle opties voor je dagelijkse ritten, wij hebben alles wat je nodig hebt om in stijl te fietsen.</p>
+    </div>
+    <div class="mt-4">
+        <img src="vue-assets/assets/moederzoon.svg" alt="moeder" class="w-full">
+        <p class="font-inter font-semibold text-2xl text-nav-text-green mt-4">Ontdek de Hottest Bike Trends van het Seizoen!</p>
+        <p class="font-inter font-medium text-md mt-1">15 februari 2024</p>
+        <p class="font-inter mt-2 text-md">Ontdek de heetste fiets trends van het seizoen! Van elektrische fietsen tot gravelbikes, wij brengen je de nieuwste innovaties en stijlen. Of je nu avontuurlijk bent of gewoon op zoek naar stijlvolle opties voor je dagelijkse ritten, wij hebben alles wat je nodig hebt om in stijl te fietsen.</p>
+    </div>
+</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+  <div class="mt-4 w-full">
+      <img src="vue-assets/assets/moederzoon.svg" alt="moeder" class="w-full">
+  </div>
+  <div>
+       <p class="font-inter font-semibold text-2xl text-nav-text-green mt-4">Ontdek de Hottest Bike Trends van het Seizoen!</p>
+        <p class="font-inter font-medium text-md mt-1">15 februari 2024</p>
+        <p class="font-inter mt-2 text-md">Ontdek de heetste fiets trends van het seizoen! Van elektrische fietsen tot gravelbikes, wij brengen je de nieuwste innovaties en stijlen. Of je nu avontuurlijk bent of gewoon op zoek naar stijlvolle opties voor je dagelijkse ritten, wij hebben alles wat je nodig hebt om in stijl te fietsen.</p>
+  </div>
+</div> #}
+
+</div>
+</div>
+{% include 'footer.twig' %}
+<a href="#top" class="fixed right-4 text-xs  bottom-4 text-white bg-fixed-nav-green p-2 rounded-full px-4 shadow-lg z-50"> Terug naar boven </a>
+
+
+</body>
+
+<script>
+function filterPosts(categoryId) {
+    var posts = document.querySelectorAll('.js-koepel');
+    posts.forEach(function(post) {
+        var postCategory = post.getAttribute('data-category');
+        if (categoryId === 'all' || postCategory === categoryId) {
+            post.style.display = 'block';
+        } else {
+            post.style.display = 'none';
+        }
+    });
+}
+</script>

@@ -1,0 +1,23 @@
+columnSuffix: hbsogiyb
+contentColumnType: string
+fieldGroup: 66129fd5-5056-40e6-b3c0-33b0ceb7cf86 # Accesoires
+handle: typeAccessoire
+instructions: null
+name: 'Type accessoire'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: true
+  source: 'group:edf987b8-fbf2-4ddf-85d3-b5cb4a34b410' # Accessoire type
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

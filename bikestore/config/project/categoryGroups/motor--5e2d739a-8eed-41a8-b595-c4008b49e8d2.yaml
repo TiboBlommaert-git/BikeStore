@@ -1,0 +1,47 @@
+defaultPlacement: end
+fieldLayouts:
+  3b0ae603-73e6-497a-9dfc-1d0564d12224:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 38654e5a-0fce-47ea-a7bf-0aa4b59ce384
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a905824d-2fa2-42a9-965e-f3fd01b032ef
+        userCondition: null
+handle: motor
+name: Motor
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    hasUrls: true
+    template: null
+    uriFormat: 'motor/{slug}'
+structure:
+  maxLevels: null
+  uid: 1ff14a20-8d2b-4f8f-9009-4c9e0b8d78ab

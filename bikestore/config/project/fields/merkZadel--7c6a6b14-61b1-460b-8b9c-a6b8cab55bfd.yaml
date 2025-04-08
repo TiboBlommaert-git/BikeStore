@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: b04bcee3-447a-4b35-b88b-43b89be444a0 # zadel
+handle: merkZadel
+instructions: null
+name: Merk
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: Merk
+  showSiteMenu: true
+  source: 'group:813a9219-9bfe-4892-ad67-cfff398d9636' # Merk zadel
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

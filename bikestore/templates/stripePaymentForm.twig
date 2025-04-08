@@ -1,0 +1,97 @@
+{% set gateway = craft.commerce.gateways.getGatewayByHandle('stripe') %}
+<div>
+    <h2 class="text-nav-text-green font-bold text-4xl font-inter mb-14">Betaling</h2>
+</div>
+<form
+  id="payment-form"
+  data-stripe-publishable-key="{{ gateway.publishableKey }}"
+  data-complete-payment-url="{{ actionUrl('commerce/payments/complete-payment') }}"
+  class="mb-20 mt-20"
+  >
+  {# Required info to route the request: #}
+  {{ csrfInput() }}
+  {{ actionInput('commerce/payments/pay') }}
+  {{ redirectInput('checkoutStap4') }}
+  {{ hiddenInput('cancelUrl', 'shop/cart'|hash) }}
+
+  {# Submit the gateway ID so Commerce knows how to set up the Payment Intent: #}
+  {{ hiddenInput('gatewayId', gateway.id) }}
+
+  <div id="payment-element-container">
+    {# Stripe Elements will get initialized in here! #}
+  </div>
+
+  <button class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-inter border border-white transition-colors duration-400 delay-50 hover:bg-unieke-services-green flex items-center mt-5">Betalen</button>
+</form>
+
+{% js 'https://js.stripe.com/v3/' %}
+
+{% js %}
+// Get a reference to the form element:
+  const $form = document.getElementById('payment-form');
+
+  // Initialize the Stripe SDK with the key we output on the form:
+  const stripe = Stripe($form.dataset.stripePublishableKey);
+
+  async function startPaymentFlow() {
+  const response = await fetch('', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+    },
+    body: new FormData($form),
+  })
+  const paymentResponse = await response.json();
+    console.log(paymentResponse);
+    console.log(paymentResponse.redirectData);
+  // 1. Initialize Stripe Elements with the provided secret:
+const elements = stripe.elements({
+  clientSecret: paymentResponse.redirectData.client_secret
+});
+
+// 2. Create the payments UI:
+const paymentElement = elements.create('payment');
+paymentElement.mount('#payment-element-container');
+
+// 3. Confirm the payment when the customer submits the form:
+$form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  handleSubmit(elements, paymentResponse);
+});
+}
+function handleSubmit(elements, payment) {
+  // 1. Grab the base "return" URL off the form:
+  const completePaymentUrl = new URL($form.dataset.completePaymentUrl);
+
+  // 2. Add params for the transaction created during the initial Ajax request:
+  completePaymentUrl.searchParams.append('commerceTransactionHash', payment.transactionHash);
+  completePaymentUrl.searchParams.append('commerceTransactionId', payment.transactionId);
+
+  // 3. Hand over control to Stripe:
+  stripe.confirmPayment({
+    elements,
+    confirmParams: {
+      return_url: completePaymentUrl.toString(),
+    },
+  })
+    .then(function(res) {
+      // Nothing to do after a successful submission!
+    })
+    .catch(function(err) {
+      // Handle error messaging...
+    });
+}
+// Kick off the initial request as soon as the page is loaded:
+startPaymentFlow();
+{% endjs %}
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('payment-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            startPaymentFlow(); // Call your startPaymentFlow function
+        });
+    });
+</script>

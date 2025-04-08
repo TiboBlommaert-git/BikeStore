@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: klantendienst
+name: Klantendienst
+propagationMethod: all
+siteSettings:
+  221550b7-fdd7-44be-9c04-f94cffd8e187: # bikestore
+    enabledByDefault: true
+    hasUrls: true
+    template: klantendienst/_entry
+    uriFormat: 'klantendienst/{slug}'
+structure:
+  maxLevels: null
+  uid: 6097f869-71ba-4014-924e-3f2f9165763e
+type: structure

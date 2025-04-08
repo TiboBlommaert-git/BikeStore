@@ -1,0 +1,14 @@
+columnSuffix: jmgqicyq
+contentColumnType: string(255)
+fieldGroup: 97e33881-4e19-46ba-be6e-cbe6e4c2c79b # Klantendienst
+handle: urlklanten
+instructions: null
+name: urlKlanten
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

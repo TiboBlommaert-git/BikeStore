@@ -1,0 +1,39 @@
+field: 25a2e0cf-475e-4acc-a7ad-b5f52c5fa4be # Product colours
+fieldLayouts:
+  d4e99c18-3513-4caf-87aa-51357cd0af4c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 44e5cd19-5efe-4ae3-bd5e-861cdd8dd72e # Black
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 807d3952-04af-4809-ba68-fd7e255de08b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: bcfb2ad9-5482-488b-b46f-0ecad9157ec5
+        userCondition: null
+fields:
+  44e5cd19-5efe-4ae3-bd5e-861cdd8dd72e: # Black
+    columnSuffix: uhhztiee
+    contentColumnType: char(7)
+    fieldGroup: null
+    handle: black
+    instructions: null
+    name: Black
+    searchable: false
+    settings:
+      defaultColor: '#111113'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+handle: black
+name: Black
+sortOrder: 5

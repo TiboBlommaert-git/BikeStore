@@ -1,0 +1,35 @@
+columnSuffix: tnlyiqra
+contentColumnType: string(9)
+fieldGroup: 7fe5120c-a9cc-44f5-8a2b-da4c27ae4bea # Address
+handle: land
+instructions: null
+name: Land
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - België
+        -
+          - value
+          - belgie
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Nederland
+        -
+          - value
+          - nederland
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

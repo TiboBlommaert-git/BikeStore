@@ -1,0 +1,79 @@
+columnSuffix: wdpptlrm
+contentColumnType: string(19)
+fieldGroup: f8eb45e1-fcba-46b0-99b2-3d345ac5a82c # Motor
+handle: typebatterij
+instructions: null
+name: 'Type batterij'
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Lithium-ion
+        -
+          - value
+          - lithiumIon
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Lithium Polymer'
+        -
+          - value
+          - lithiumPolymer
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Nickel-Cadmium
+        -
+          - value
+          - nickelCadmium
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Nikkel-metaalhydride
+        -
+          - value
+          - nikkelMetaalhydride
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Loodzuur batterij'
+        -
+          - value
+          - loodzuurBatterij
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Vaste-stof batterij'
+        -
+          - value
+          - vasteStofBatterij
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

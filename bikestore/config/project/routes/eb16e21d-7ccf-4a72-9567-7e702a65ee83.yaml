@@ -1,0 +1,6 @@
+siteUid: null
+sortOrder: 9
+template: brochure
+uriParts:
+  - 'http://localhost/2023-2024-atelier4-bs-groep4/bikestore/web/brochure'
+uriPattern: 'http://localhost/2023-2024-atelier4-bs-groep4/bikestore/web/brochure'

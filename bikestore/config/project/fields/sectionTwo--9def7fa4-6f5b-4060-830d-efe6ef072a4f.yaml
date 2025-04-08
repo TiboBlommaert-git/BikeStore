@@ -1,0 +1,19 @@
+columnSuffix: pbtoknzc
+contentColumnType: text
+fieldGroup: 56f3d70b-fb33-435f-bbb9-b9dc8765d17a # Blog
+handle: sectionTwo
+instructions: null
+name: 'Paragraaf twee'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

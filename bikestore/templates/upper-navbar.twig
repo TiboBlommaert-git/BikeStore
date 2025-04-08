@@ -1,0 +1,15 @@
+<div class="w-100 bg-fixed-nav-green h-12 font-inter text-primary-white text-xss">
+    <div class="max-w-screen-xl mx-auto">
+      <div class="flex justify-end gap-5 items-center h-12 mr-4">
+        {% for navItem in topNavigatie.navigation %}
+          <a href="{{siteUrl}}/{{ navItem.url | trim('/')}} "><div>{{navItem.name}}</div></a>
+        {% endfor %}
+        <a href="{{siteUrl}}/checkout">
+                <img class="cursor-pointer" src="vue-assets/assets/cartShopping.svg" alt="shoppingcart" />
+        </a>
+        <a href="{{siteUrl}}/loginpage">
+            <img class="cursor-pointer" src="vue-assets/assets/login.svg" alt="iconaccount" />
+        </a>
+      </div>
+    </div>
+  </div>

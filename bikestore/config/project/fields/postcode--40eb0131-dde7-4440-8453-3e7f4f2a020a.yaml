@@ -1,0 +1,20 @@
+columnSuffix: qmbwoxsc
+contentColumnType: integer(10)
+fieldGroup: 7fe5120c-a9cc-44f5-8a2b-da4c27ae4bea # Address
+handle: postcode
+instructions: null
+name: Postcode
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: null
+  max: null
+  min: 0
+  prefix: null
+  previewCurrency: null
+  previewFormat: none
+  size: 4
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

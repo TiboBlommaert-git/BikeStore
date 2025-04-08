@@ -1,0 +1,47 @@
+fieldLayouts:
+  33c1d5fe-cdcf-453d-9c44-54bf4811a663:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 0d25c35b-bfdf-4326-9875-8e08e4b926bb
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 17556dd9-ef88-4b04-b4c1-2cde1c5235ac
+        userCondition: null
+handle: assortiment
+hasTitleField: false
+name: Assortiment
+section: f617498e-0da0-49ef-8a2c-ffe507e0cc77 # Assortiment
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

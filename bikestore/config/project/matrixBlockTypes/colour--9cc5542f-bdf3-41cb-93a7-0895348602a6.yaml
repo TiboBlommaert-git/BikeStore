@@ -1,0 +1,110 @@
+field: dc50328e-497a-4f52-b57d-e93aad5485a5 # Kleur accessoire
+fieldLayouts:
+  fd5e5d67-1fe3-4a6c-beaa-bbacbf1078d0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f37c6e75-8522-495a-9e2d-25f80e7d3381 # Brown #964B00
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0cd87c0b-da25-4973-a130-59efb61af4a4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 67e91ea7-3c27-411a-a666-3fc0766f562d # Grey #808080
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f49eb012-b567-435d-b41e-60ce6317691f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 91df17f8-65e2-4012-bf45-c678f2da4d19 # Black #000000
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c0b352cb-eb30-4fc6-b654-fc1845d56c96
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: dcd87243-c411-40db-84b5-00aa8787886a
+        userCondition: null
+fields:
+  67e91ea7-3c27-411a-a666-3fc0766f562d: # Grey #808080
+    columnSuffix: khpwoaqe
+    contentColumnType: text
+    fieldGroup: null
+    handle: grey808080
+    instructions: null
+    name: 'Grey #808080'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  91df17f8-65e2-4012-bf45-c678f2da4d19: # Black #000000
+    columnSuffix: tfgidljk
+    contentColumnType: text
+    fieldGroup: null
+    handle: black000000
+    instructions: null
+    name: 'Black #000000'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f37c6e75-8522-495a-9e2d-25f80e7d3381: # Brown #964B00
+    columnSuffix: rnaccyhi
+    contentColumnType: text
+    fieldGroup: null
+    handle: brown964b00
+    instructions: null
+    name: 'Brown #964B00'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: colour
+name: Colour
+sortOrder: 1

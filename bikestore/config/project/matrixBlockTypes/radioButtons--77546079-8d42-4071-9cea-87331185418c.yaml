@@ -1,0 +1,177 @@
+field: e728aeb2-c1a7-41ca-acbc-06c4b39ad3ff # Basic Form Fields
+fieldLayouts:
+  a335fa3f-571c-40e5-8bd6-677c31a01bd7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 84110209-947d-4a25-86f0-2ddf01c4bfa4 # Label
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d816f34f-9894-4316-898f-712757543213
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bc25bed2-7ba1-475f-8e5b-39c8b3542d27 # Handle
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eec80030-1b61-4413-b3d8-3ee4b8124672
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c27641e4-55c3-417b-ba26-43a4a97683fa # Options
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bbf7c0e2-0427-4087-8564-b55d8501b06f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f47a10d5-d9b6-4fc7-986a-b2caff7fc473 # Required
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4b1a3d28-c6ce-4553-9763-3b3a3fda17a8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c0141943-c2c1-4500-a966-3d552f34b010
+        userCondition: null
+fields:
+  84110209-947d-4a25-86f0-2ddf01c4bfa4: # Label
+    columnSuffix: iuwzvcfb
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: null
+    name: Label
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  bc25bed2-7ba1-475f-8e5b-39c8b3542d27: # Handle
+    columnSuffix: xjgcsqaw
+    contentColumnType: text
+    fieldGroup: null
+    handle: fieldHandle
+    instructions: null
+    name: Handle
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  c27641e4-55c3-417b-ba26-43a4a97683fa: # Options
+    columnSuffix: iqtvzrus
+    contentColumnType: text
+    fieldGroup: null
+    handle: options
+    instructions: null
+    name: Options
+    searchable: true
+    settings:
+      addRowLabel: 'Add an option'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Option Label'
+                -
+                  - handle
+                  - optionLabel
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Value
+                -
+                  - handle
+                  - value
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+      maxRows: null
+      minRows: 1
+      staticRows: false
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Table
+  f47a10d5-d9b6-4fc7-986a-b2caff7fc473: # Required
+    columnSuffix: rshmapje
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: required
+    instructions: 'This field is required?'
+    name: Required
+    searchable: true
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Lightswitch
+handle: radioButtons
+name: 'Radio Buttons'
+sortOrder: 4

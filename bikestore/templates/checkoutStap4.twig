@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Bikestore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <script src="{{siteUrl}}/vue-assets/js/checkout1.js"></script>
+    <link rel="stylesheet" href="{{siteUrl}}/vue-assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="{{siteUrl}}/vue-assets/assets/favicon.ico">
+</head>
+
+<body class="bg-primary-white">
+{% include 'upper-navbar.twig' %}
+
+{% include 'navbar.twig' %}
+<div class="max-w-screen-xl relative lg:px-30 md:pt-10 md:pb-10 md:px-20 lg:pb-5 lg:pt-5 mx-auto mt-7">
+  <div class="relative lg:px-30 md:pt-10 md:pb-10 md:px-20 lg:pb-5 lg:pt-5">
+    <div class="flex justify-between mb-2">
+    <img src="vue-assets/assets/cart-shopping-checkout.svg" class="h-6 w-6" alt="cart">
+    <img src="vue-assets/assets/account-checkout-dark.svg" class="h-6 w-6" alt="check">
+    <img src="vue-assets/assets/card-checkout-dark.svg" class="h-6 w-6" alt="card">
+    <img src="vue-assets/assets/check.svg" class="h-6 w-6" alt="checkk">
+</div>
+
+    <div class="bg-unieke-services-green h-2 relative w-full">
+    <div class="bg-nav-text-green h-2 absolute top-0 left-0" style="width: 100%;"></div>
+  </div>
+
+<div class="flex justify-center my-24">
+    <img src="vue-assets/assets/check.svg" alt="">
+  </div>
+
+  <div class="max-w-screen-xl mx-auto">
+    <div class="flex justify-center flex-wrap">
+      <h2 class="font-medium font-sofia text-3xl md:text-5xl text-nav-text-green mb-8 text-center">Uw bestelling is voltooid</h2>
+      <p class="text-lg font-inter text-center w-2/3 mb-12">Hartelijk dank voor uw aankoop! We willen u graag informeren over de details van uw bestelling en de verwachte leverdatum bij u thuis. Mocht u verdere vragen hebben of tegen problemen aanlopen, aarzel dan niet om contact met ons op te nemen. Hieronder vindt u een link waarmee u uw bestelling kunt volgen en op de hoogte kunt blijven van de status ervan.
+        Wij waarderen uw vertrouwen in ons en kijken ernaar uit om u binnenkort uw bestelling te bezorgen.</p>
+    </div>
+  </div>
+
+  <div class="max-w-screen-xl md:mx-auto px-10 bg-primary-white">
+    <div class="bg-primary-white lg:py-0 flex justify-center flex-wrap">
+            <a href="{{siteUrl}}" class="bg-nav-text-green text-primary-white font-regular py-2 px-4 rounded-1px font-inter border border-white transition-colors duration-400 delay-50 hover:bg-unieke-services-green flex items-center">
+                Terug naar home
+            </a>      
+        </div> 
+        </form>
+    </div> 
+  </div>
+</div>
+</div>
+{% include 'footer.twig' %}
+</body>
